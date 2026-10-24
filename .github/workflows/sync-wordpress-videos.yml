@@ -37,8 +37,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install Pillow
+      - name: Install system tools and Python dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          pip install Pillow
 
       - name: Sync videos (one batch per run)
         env:
