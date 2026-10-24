@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Resumable WordPress video importer. Processes one batch per invocation."""
-import argparse, base64, html, json, os, re, sys, time, random
+import argparse, base64, html, json, os, re, sys, time, random, subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
@@ -110,6 +110,44 @@ def find_video_url(content):
     return ""
 
 
+
+def duration_from_mp4(url):
+    """Read duration from MP4 metadata with a short, bounded ffprobe request."""
+    if not url or not url.startswith("https://"):
+        return ""
+    try:
+        log("Duration metadata missing on page; trying MP4 metadata with ffprobe...")
+        result = subprocess.run(
+            [
+                "ffprobe", "-v", "error",
+                "-rw_timeout", "5000000",
+                "-probesize", "256k",
+                "-analyzeduration", "1000000",
+                "-show_entries", "format=duration",
+                "-of", "default=noprint_wrappers=1:nokey=1",
+                url,
+            ],
+            capture_output=True, text=True, timeout=8, check=False
+        )
+        if result.returncode != 0:
+            detail = (result.stderr or "").strip().splitlines()
+            if detail:
+                log(f"Duration unavailable from MP4 metadata: {detail[-1][:160]}")
+            return ""
+        seconds_text = (result.stdout or "").strip()
+        seconds = float(seconds_text)
+        if seconds <= 0:
+            return ""
+        total = int(seconds + 0.5)
+        hours, rem = divmod(total, 3600)
+        minutes, secs = divmod(rem, 60)
+        duration = f"{hours:02d}:{minutes:02d}:{secs:02d}" if hours else f"{minutes}:{secs:02d}"
+        log(f"Duration found from MP4 metadata: {duration}")
+        return duration
+    except (OSError, ValueError, subprocess.TimeoutExpired) as e:
+        log(f"Duration probe skipped: {e}")
+        return ""
+
 def parse_post(post):
     link = post.get("link", "")
     if not link: return None
@@ -130,8 +168,12 @@ def parse_post(post):
         media = post.get("_embedded", {}).get("wp:featuredmedia", [])
         if media: thumb = media[0].get("source_url", "")
     date = meta(page, "uploadDate") or post.get("date_gmt") or post.get("date") or ""
-    # Read duration from page metadata only; leave it blank if unavailable.
+    # First try fast page metadata; probe MP4 only when page metadata is absent.
     duration = find_duration_in_page(page)
+    if duration:
+        log(f"Duration found in page metadata: {duration}")
+    else:
+        duration = duration_from_mp4(video_url)
     return {"source_id": str(post.get("id", "")), "title": title, "video_url": video_url,
             "thumb_url": thumb, "date": date, "link": link, "duration": duration}
 
