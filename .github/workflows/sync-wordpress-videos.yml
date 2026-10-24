@@ -44,14 +44,24 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Python dependencies
+      - name: Install system tools and Python dependencies
         shell: bash
         run: |
           set -Eeuo pipefail
+
           echo "[SETUP] Python version:"
           python --version
+
           echo "[SETUP] Installing Pillow..."
           python -m pip install --disable-pip-version-check Pillow
+
+          echo "[SETUP] Installing ffmpeg/ffprobe..."
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+          echo "[SETUP] Verifying ffprobe..."
+          ffprobe -version
+
           echo "[SETUP] Dependencies ready."
 
       - name: Sync videos (one batch per run)
@@ -82,8 +92,7 @@ jobs:
           test -f scripts/sync_videos.py
 
           echo "[SYNC] Starting Python script..."
-          set -o pipefail
-          python -u -X faulthandler scripts/sync_videos.py "${args[@]}" 2>&1 | tee sync-output.log
+          python -u -X faulthandler scripts/sync_videos.py "${args[@]}"
 
           echo "[SYNC] Python script completed successfully."
 
