@@ -80,28 +80,20 @@ def parse_duration(value):
     return ""
 
 def find_duration_in_page(content):
-    """Extract common duration formats from metadata and embedded player JSON."""
-    # Standard metadata tags (including ISO-8601 values such as PT8M16S).
+    """Extract duration from common page metadata/player config before using ffprobe."""
     for key in ("duration", "video:duration", "og:video:duration", "length"):
         value = parse_duration(meta(content, key))
         if value:
             return value
 
-    # JSON-LD and player config can use quoted strings or numeric seconds.
+    # JSON-LD/player config: duration can be a string (PT8M16S, 08:16)
+    # or a number of seconds.
     patterns = (
-        r'''["'](?:duration|videoDuration|durationSeconds)["']\\s*:\\s*["']([^"']+)["']''',
-        r'''["'](?:duration|videoDuration|durationSeconds)["']\\s*:\\s*(\\d+(?:\\.\\d+)?)''',
+        r'''["'](?:duration|videoDuration|durationSeconds)["']\s*:\s*["']([^"']+)["']''',
+        r'''["'](?:duration|videoDuration|durationSeconds)["']\s*:\s*(\d+(?:\.\d+)?)''',
+        r'''(?:data-duration|data-video-duration)\s*=\s*["']([^"']+)["']''',
     )
     for pattern in patterns:
-        match = re.search(pattern, content, re.I)
-        if match:
-            value = parse_duration(match.group(1))
-            if value:
-                return value
-    # Sometimes HTML contains a visible player duration like 08:16.
-    for pattern in (
-        r'''(?:data-duration|data-video-duration)\\s*=\\s*["']([^"']+)["']''',
-    ):
         match = re.search(pattern, content, re.I)
         if match:
             value = parse_duration(match.group(1))
