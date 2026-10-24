@@ -12,8 +12,8 @@ DATA = Path("assets/data/videos.json")
 THUMBS = Path("assets/thumb")
 STATE = Path("assets/data/.video_import_state.json")
 USER_AGENT = "Mozilla/5.0 (compatible; VideoCatalogSync/3.0)"
-REQUEST_TIMEOUT = 45
-MAX_RETRIES = 5
+REQUEST_TIMEOUT = 20
+MAX_RETRIES = 2
 MAX_THUMB_BYTES = 8 * 1024 * 1024
 PER_PAGE = 100
 
@@ -32,7 +32,7 @@ def fetch(url, timeout=REQUEST_TIMEOUT, headers=None):
             if e.code not in (408, 425, 429, 500, 502, 503, 504): raise
         except (URLError, TimeoutError, OSError) as e: last = e
         if attempt < MAX_RETRIES:
-            delay = min(2 ** attempt * 2, 30)
+            delay = min(2 ** attempt, 4)
             log(f"Request retry {attempt+1}/{MAX_RETRIES}: {url} ({last}); wait {delay}s")
             time.sleep(delay)
     raise RuntimeError(f"Request failed after retries: {url}: {last}")
@@ -79,6 +79,36 @@ def parse_duration(value):
         return f"{total//3600:02d}:{(total%3600)//60:02d}:{total%60:02d}" if total >= 3600 else f"{total//60:02d}:{total%60:02d}"
     return ""
 
+def find_duration_in_page(content):
+    """Extract common duration formats from metadata and embedded player JSON."""
+    # Standard metadata tags (including ISO-8601 values such as PT8M16S).
+    for key in ("duration", "video:duration", "og:video:duration", "length"):
+        value = parse_duration(meta(content, key))
+        if value:
+            return value
+
+    # JSON-LD and player config can use quoted strings or numeric seconds.
+    patterns = (
+        r'''["'](?:duration|videoDuration|durationSeconds)["']\\s*:\\s*["']([^"']+)["']''',
+        r'''["'](?:duration|videoDuration|durationSeconds)["']\\s*:\\s*(\\d+(?:\\.\\d+)?)''',
+    )
+    for pattern in patterns:
+        match = re.search(pattern, content, re.I)
+        if match:
+            value = parse_duration(match.group(1))
+            if value:
+                return value
+    # Sometimes HTML contains a visible player duration like 08:16.
+    for pattern in (
+        r'''(?:data-duration|data-video-duration)\\s*=\\s*["']([^"']+)["']''',
+    ):
+        match = re.search(pattern, content, re.I)
+        if match:
+            value = parse_duration(match.group(1))
+            if value:
+                return value
+    return ""
+
 def find_video_url(content):
     value = meta(content, "contentUrl")
     if direct_mp4(value): return value
@@ -88,19 +118,28 @@ def find_video_url(content):
     return ""
 
 def duration_from_mp4(url):
-    """Probe remote MP4 metadata with ffprobe (HTTP range requests; no full download intended)."""
+    """Quick fallback probe of remote MP4 metadata; strictly time-limited."""
     if not url or not url.startswith("https://"):
         return ""
     try:
+        # Remote servers may not support byte-range/seek requests. Keep this fallback
+        # short so one problematic MP4 cannot stall an entire 100-post batch.
         result = subprocess.run(
-            ["ffprobe", "-v", "error", "-rw_timeout", "15000000",
-             "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", url],
-            capture_output=True, text=True, timeout=25, check=False
+            [
+                "ffprobe", "-v", "error",
+                "-rw_timeout", "5000000",
+                "-probesize", "256k",
+                "-analyzeduration", "1000000",
+                "-show_entries", "format=duration",
+                "-of", "default=noprint_wrappers=1:nokey=1",
+                url,
+            ],
+            capture_output=True, text=True, timeout=8, check=False
         )
         if result.returncode != 0:
             detail = (result.stderr or "").strip().splitlines()
             if detail:
-                log(f"ffprobe duration unavailable: {detail[-1][:180]}")
+                log(f"Duration probe skipped (source did not provide readable metadata): {detail[-1][:120]}")
             return ""
         seconds = float((result.stdout or "").strip())
         if seconds <= 0:
@@ -110,7 +149,7 @@ def duration_from_mp4(url):
         minutes, secs = divmod(rem, 60)
         return f"{hours:02d}:{minutes:02d}:{secs:02d}" if hours else f"{minutes}:{secs:02d}"
     except (OSError, ValueError, subprocess.TimeoutExpired) as e:
-        log(f"ffprobe duration unavailable: {e}")
+        log(f"Duration probe skipped: {e}")
         return ""
 
 def parse_post(post):
@@ -133,13 +172,8 @@ def parse_post(post):
         media = post.get("_embedded", {}).get("wp:featuredmedia", [])
         if media: thumb = media[0].get("source_url", "")
     date = meta(page, "uploadDate") or post.get("date_gmt") or post.get("date") or ""
-    duration = ""
-    for key in ("duration", "video:duration", "og:video:duration"):
-        duration = parse_duration(meta(page, key))
-        if duration: break
-    if not duration:
-        m = re.search(r"""["']duration["']\s*:\s*["']([^"']+)["']""", page, re.I)
-        if m: duration = parse_duration(m.group(1))
+    # Prefer page metadata because it is much faster than probing the MP4.
+    duration = find_duration_in_page(page)
     if not duration:
         duration = duration_from_mp4(video_url)
     return {"source_id": str(post.get("id", "")), "title": title, "video_url": video_url,
@@ -164,9 +198,9 @@ def download_thumb(url, target):
         from PIL import Image
         with Image.open(BytesIO(raw)) as src:
             im = src.convert("RGB")
-            im.thumbnail((960, 720))
+            im.thumbnail((800, 600))
             target.parent.mkdir(parents=True, exist_ok=True)
-            im.save(target, "WEBP", quality=84, method=4)
+            im.save(target, "WEBP", quality=82, method=3)
         return True
     except Exception as e:
         log(f"Thumbnail unavailable {url}: {e}")
