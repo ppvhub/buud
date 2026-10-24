@@ -39,7 +39,14 @@
   <!-- VIDEO GRID -->
   <main class="container">
 
-    <section id="videoGrid" class="video-grid"></section>
+    <section id="videoGrid" class="video-grid" aria-live="polite"></section>
+
+    <!-- Pagination: 30 videos per page -->
+    <nav id="videoPagination" class="video-pagination" aria-label="Video pages" hidden>
+      <button id="prevPage" type="button" disabled>Previous</button>
+      <span id="pageInfo" aria-live="polite">Page 1</span>
+      <button id="nextPage" type="button" disabled>Next</button>
+    </nav>
 
     <div id="loadingGrid" class="loading-grid">
 
@@ -89,6 +96,117 @@
 
   <script src="assets/js/search.js"></script>
   <script src="assets/js/app.js"></script>
+
+  <!-- Client-side pagination: show at most 30 matching video cards per page. -->
+  <style>
+    .video-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 28px 0;
+    }
+    .video-pagination[hidden] { display: none !important; }
+    .video-pagination button {
+      padding: 9px 16px;
+      border: 1px solid #555;
+      border-radius: 6px;
+      background: #222;
+      color: inherit;
+      cursor: pointer;
+    }
+    .video-pagination button:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+    }
+    .video-pagination #pageInfo { font-size: .95rem; }
+  </style>
+  <script>
+    (() => {
+      const PAGE_SIZE = 30;
+      const grid = document.getElementById('videoGrid');
+      const pagination = document.getElementById('videoPagination');
+      const prevButton = document.getElementById('prevPage');
+      const nextButton = document.getElementById('nextPage');
+      const pageInfo = document.getElementById('pageInfo');
+      const searchInput = document.getElementById('searchInput');
+      let currentPage = 1;
+      let updateQueued = false;
+
+      function getMatchingCards() {
+        return Array.from(grid.querySelectorAll('.video-card')).filter(card => {
+          // Search filtering from search.js uses display:none; pagination uses hidden.
+          return card.style.display !== 'none' &&
+                 getComputedStyle(card).display !== 'none';
+        });
+      }
+
+      function renderPagination(resetPage = false) {
+        if (resetPage) currentPage = 1;
+
+        const cards = Array.from(grid.querySelectorAll('.video-card'));
+        const matching = getMatchingCards();
+        const totalPages = Math.max(1, Math.ceil(matching.length / PAGE_SIZE));
+
+        if (currentPage > totalPages) currentPage = totalPages;
+
+        // First reveal all cards, then hide only cards outside the current page.
+        cards.forEach(card => { card.hidden = true; });
+        const start = (currentPage - 1) * PAGE_SIZE;
+        matching.slice(start, start + PAGE_SIZE).forEach(card => { card.hidden = false; });
+
+        pagination.hidden = matching.length <= PAGE_SIZE;
+        prevButton.disabled = currentPage <= 1;
+        nextButton.disabled = currentPage >= totalPages;
+        pageInfo.textContent = matching.length
+          ? 'Page ' + currentPage + ' of ' + totalPages + ' · ' + matching.length + ' videos'
+          : 'No videos found';
+      }
+
+      prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderPagination();
+          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+
+      nextButton.addEventListener('click', () => {
+        const totalPages = Math.max(1, Math.ceil(getMatchingCards().length / PAGE_SIZE));
+        if (currentPage < totalPages) {
+          currentPage++;
+          renderPagination();
+          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', () => {
+          currentPage = 1;
+          // Allow search.js to apply its filter before updating pagination.
+          queueUpdate();
+        });
+      }
+
+      function queueUpdate() {
+        if (updateQueued) return;
+        updateQueued = true;
+        requestAnimationFrame(() => {
+          updateQueued = false;
+          renderPagination();
+        });
+      }
+
+      // Re-render pagination when app.js adds cards or search.js changes visibility.
+      const observer = new MutationObserver(queueUpdate);
+      observer.observe(grid, { childList: true, subtree: true, attributes: true, attributeFilter: ['style'] });
+
+      // Initial and delayed passes cover scripts that populate the grid asynchronously.
+      document.addEventListener('DOMContentLoaded', () => renderPagination(true));
+      queueUpdate();
+    })();
+  </script>
 
   <!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
