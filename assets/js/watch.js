@@ -12,6 +12,10 @@ const viewsEl = document.getElementById("videoViews");
 
 const sidebar = document.getElementById("sidebarVideos");
 const template = document.getElementById("sidebarTemplate");
+const relatedGrid = document.getElementById("relatedVideos");
+const relatedTemplate = document.getElementById("relatedTemplate");
+const RECOMMENDATION_COUNT = 16;
+let recommendedVideos = [];
 
 const likeBtn = document.getElementById("likeBtn");
 const likeCount = document.getElementById("likeCount");
@@ -63,7 +67,9 @@ async function initWatchPage() {
             database[0];
 
         renderPlayer(currentVideo);
-        renderSidebar();
+        recommendedVideos = chooseRandomVideos(database, currentVideo, RECOMMENDATION_COUNT);
+        renderSidebar(recommendedVideos);
+        renderRelatedVideos(recommendedVideos);
         loadLike();
 
     } catch (err) {
@@ -104,30 +110,60 @@ player.addEventListener("playing", () => {
     loading.classList.add("hide");
 });
 
-/* ================= SIDEBAR ================= */
+/* ================= RANDOM RECOMMENDATIONS ================= */
 
-function renderSidebar() {
+// Pick up to 16 random videos, excluding the video currently being watched.
+function chooseRandomVideos(videos, activeVideo, limit = RECOMMENDATION_COUNT) {
+    const candidates = videos.filter(video => video && video.id !== activeVideo?.id);
+
+    // Fisher-Yates shuffle: randomize the recommendation order without changing database order.
+    for (let i = candidates.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [candidates[i], candidates[j]] = [candidates[j], candidates[i]];
+    }
+
+    return candidates.slice(0, limit);
+}
+
+function renderSidebar(videos = []) {
     sidebar.innerHTML = "";
+    const fragment = document.createDocumentFragment();
 
-    database.forEach(video => {
+    videos.forEach(video => {
         const clone = template.content.cloneNode(true);
-
-        clone.querySelector(".side-thumb").src = video.thumb;
-        clone.querySelector(".side-duration").textContent = video.duration;
-        clone.querySelector(".side-title").textContent = video.title;
-        clone.querySelector(".side-views").textContent =
-            `${video.views} Views`;
+        const thumb = clone.querySelector(".side-thumb");
+        thumb.src = video.thumb || "";
+        thumb.alt = video.title || "Video thumbnail";
+        clone.querySelector(".side-duration").textContent = video.duration || "";
+        clone.querySelector(".side-title").textContent = video.title || "Untitled video";
+        clone.querySelector(".side-views").textContent = `${video.views ?? "0"} Views`;
 
         const card = clone.querySelector(".side-card");
-
         card.href = `watch.html?id=${encodeURIComponent(video.id)}`;
-
-        if (video.id === currentVideo.id) {
-            card.classList.add("active");
-        }
-
-        sidebar.appendChild(clone);
+        fragment.appendChild(clone);
     });
+
+    sidebar.appendChild(fragment);
+}
+
+function renderRelatedVideos(videos = []) {
+    if (!relatedGrid || !relatedTemplate) return;
+    relatedGrid.innerHTML = "";
+    const fragment = document.createDocumentFragment();
+
+    videos.forEach(video => {
+        const clone = relatedTemplate.content.cloneNode(true);
+        const thumb = clone.querySelector(".related-thumb");
+        thumb.src = video.thumb || "";
+        thumb.alt = video.title || "Video thumbnail";
+        clone.querySelector(".related-duration").textContent = video.duration || "";
+        clone.querySelector(".related-title").textContent = video.title || "Untitled video";
+        clone.querySelector(".related-views").textContent = `${video.views ?? "0"} Views`;
+        clone.querySelector(".related-card").href = `watch.html?id=${encodeURIComponent(video.id)}`;
+        fragment.appendChild(clone);
+    });
+
+    relatedGrid.appendChild(fragment);
 }
 
 /* ================= LIKE ================= */
