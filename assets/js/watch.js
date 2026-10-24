@@ -15,7 +15,8 @@ const template = document.getElementById("sidebarTemplate");
 const relatedGrid = document.getElementById("relatedVideos");
 const relatedTemplate = document.getElementById("relatedTemplate");
 const RECOMMENDATION_COUNT = 16;
-let recommendedVideos = [];
+let sidebarRecommendedVideos = [];
+let relatedRecommendedVideos = [];
 
 const likeBtn = document.getElementById("likeBtn");
 const likeCount = document.getElementById("likeCount");
@@ -67,9 +68,18 @@ async function initWatchPage() {
             database[0];
 
         renderPlayer(currentVideo);
-        recommendedVideos = chooseRandomVideos(database, currentVideo, RECOMMENDATION_COUNT);
-        renderSidebar(recommendedVideos);
-        renderRelatedVideos(recommendedVideos);
+        // Ambil 32 video acak dalam satu pengacakan agar kedua bagian tidak tumpang tindih.
+        // 16 pertama untuk sidebar, 16 berikutnya untuk Related Videos.
+        const recommendations = chooseRandomVideos(
+            database,
+            currentVideo,
+            RECOMMENDATION_COUNT * 2
+        );
+        sidebarRecommendedVideos = recommendations.slice(0, RECOMMENDATION_COUNT);
+        relatedRecommendedVideos = recommendations.slice(RECOMMENDATION_COUNT, RECOMMENDATION_COUNT * 2);
+
+        renderSidebar(sidebarRecommendedVideos);
+        renderRelatedVideos(relatedRecommendedVideos);
         loadLike();
 
     } catch (err) {
