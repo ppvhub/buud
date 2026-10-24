@@ -1,0 +1,63 @@
+name: Sync WordPress Videos
+
+on:
+  workflow_dispatch:
+    inputs:
+      sync_mode:
+        description: "full = resume/import all posts; recent = newest 100 posts"
+        required: true
+        type: choice
+        options: [recent, full]
+        default: recent
+      reset_catalog:
+        description: "DANGEROUS: clear videos.json and all thumbnails before starting"
+        required: true
+        type: boolean
+        default: false
+  schedule:
+    - cron: "*/15 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-wordpress-videos
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install Pillow
+
+      - name: Sync videos (one batch per run)
+        env:
+          SYNC_MODE: ${{ github.event.inputs.sync_mode || 'recent' }}
+          RESET_CATALOG: ${{ github.event.inputs.reset_catalog || 'false' }}
+        run: |
+          args=()
+          if [[ "$SYNC_MODE" == "full" ]]; then args+=(--full); fi
+          if [[ "$RESET_CATALOG" == "true" ]]; then args+=(--reset --full); fi
+          python -u scripts/sync_videos.py "${args[@]}"
+
+      - name: Commit checkpoint, catalog and thumbnails
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/data/videos.json assets/data/.video_import_state.json assets/thumb
+            git commit -m "Batch sync WordPress videos"
+            git push
+          else
+            echo "No changes to commit"
+          fi
