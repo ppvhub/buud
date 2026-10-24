@@ -108,12 +108,17 @@
     </section>
 
 
-    <!-- RIGHT SIDEBAR -->
+    <!-- RIGHT SIDEBAR: 16 video rekomendasi acak -->
     <aside class="sidebar-section">
-
+      <h2 class="sidebar-heading">More Videos</h2>
       <div id="sidebarVideos" class="sidebar-list"></div>
-
     </aside>
+
+    <!-- RELATED VIDEOS: 16 video acak di bawah player -->
+    <section class="related-section" aria-labelledby="relatedHeading">
+      <h2 id="relatedHeading" class="related-heading">Related Videos</h2>
+      <div id="relatedVideos" class="related-grid"></div>
+    </section>
 
   </main>
 
@@ -143,6 +148,19 @@
 
   </template>
 
+  <!-- TEMPLATE RELATED VIDEO -->
+  <template id="relatedTemplate">
+    <a class="related-card">
+      <div class="related-thumb-box">
+        <img class="related-thumb" loading="lazy" alt="">
+        <span class="related-duration"></span>
+      </div>
+      <div class="related-meta">
+        <div class="related-title"></div>
+        <div class="related-views"></div>
+      </div>
+    </a>
+  </template>
 
   <script src="assets/js/encoder.js"></script>
   <script src="assets/js/loader.min.js"></script>
