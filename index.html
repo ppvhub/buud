@@ -97,7 +97,7 @@
   <script src="assets/js/search.js"></script>
   <script src="assets/js/app.js"></script>
 
-  <!-- Client-side pagination: show at most 30 matching video cards per page. -->
+  <!-- Pagination: 30 video cards per page; compatible with app.js/search.js -->
   <style>
     .video-pagination {
       display: flex;
@@ -125,66 +125,68 @@
   <script>
     (() => {
       const PAGE_SIZE = 30;
-      const grid = document.getElementById('videoGrid');
-      const pagination = document.getElementById('videoPagination');
-      const prevButton = document.getElementById('prevPage');
-      const nextButton = document.getElementById('nextPage');
-      const pageInfo = document.getElementById('pageInfo');
-      const searchInput = document.getElementById('searchInput');
+      const grid = document.getElementById("videoGrid");
+      const pagination = document.getElementById("videoPagination");
+      const prevButton = document.getElementById("prevPage");
+      const nextButton = document.getElementById("nextPage");
+      const pageInfo = document.getElementById("pageInfo");
+      const searchInput = document.getElementById("searchInput");
+
       let currentPage = 1;
       let updateQueued = false;
+      let lastCardCount = 0;
 
+      // app.js/search.js filters by rebuilding the grid, not by hidden/display.
+      // Do NOT use getComputedStyle(card).display here: pagination itself hides
+      // off-page cards, which would make the script incorrectly think there is
+      // only one page.
       function getMatchingCards() {
-        return Array.from(grid.querySelectorAll('.video-card')).filter(card => {
-          // Search filtering from search.js uses display:none; pagination uses hidden.
-          return card.style.display !== 'none' &&
-                 getComputedStyle(card).display !== 'none';
-        });
+        return Array.from(grid.querySelectorAll(".video-card"))
+          .filter(card => card.style.display !== "none");
       }
 
       function renderPagination(resetPage = false) {
         if (resetPage) currentPage = 1;
 
-        const cards = Array.from(grid.querySelectorAll('.video-card'));
-        const matching = getMatchingCards();
-        const totalPages = Math.max(1, Math.ceil(matching.length / PAGE_SIZE));
-
+        const cards = getMatchingCards();
+        const totalPages = Math.max(1, Math.ceil(cards.length / PAGE_SIZE));
         if (currentPage > totalPages) currentPage = totalPages;
 
-        // First reveal all cards, then hide only cards outside the current page.
-        cards.forEach(card => { card.hidden = true; });
         const start = (currentPage - 1) * PAGE_SIZE;
-        matching.slice(start, start + PAGE_SIZE).forEach(card => { card.hidden = false; });
+        cards.forEach((card, index) => {
+          card.hidden = index < start || index >= start + PAGE_SIZE;
+        });
 
-        pagination.hidden = matching.length <= PAGE_SIZE;
+        pagination.hidden = cards.length <= PAGE_SIZE;
         prevButton.disabled = currentPage <= 1;
         nextButton.disabled = currentPage >= totalPages;
-        pageInfo.textContent = matching.length
-          ? 'Page ' + currentPage + ' of ' + totalPages + ' · ' + matching.length + ' videos'
-          : 'No videos found';
+        pageInfo.textContent = cards.length
+          ? "Page " + currentPage + " of " + totalPages + " · " + cards.length + " videos"
+          : "No videos found";
+        lastCardCount = grid.querySelectorAll(".video-card").length;
       }
 
-      prevButton.addEventListener('click', () => {
+      prevButton.addEventListener("click", () => {
         if (currentPage > 1) {
           currentPage--;
           renderPagination();
-          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          grid.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       });
 
-      nextButton.addEventListener('click', () => {
+      nextButton.addEventListener("click", () => {
         const totalPages = Math.max(1, Math.ceil(getMatchingCards().length / PAGE_SIZE));
         if (currentPage < totalPages) {
           currentPage++;
           renderPagination();
-          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          grid.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       });
 
+      // Reset to page 1 when the search changes.
       if (searchInput) {
-        searchInput.addEventListener('input', () => {
+        searchInput.addEventListener("input", () => {
           currentPage = 1;
-          // Allow search.js to apply its filter before updating pagination.
           queueUpdate();
         });
       }
@@ -198,12 +200,22 @@
         });
       }
 
-      // Re-render pagination when app.js adds cards or search.js changes visibility.
-      const observer = new MutationObserver(queueUpdate);
-      observer.observe(grid, { childList: true, subtree: true, attributes: true, attributeFilter: ['style'] });
+      // Watch card creation/removal only. Do not observe attributes: pagination
+      // changes the hidden attribute on cards and would trigger unnecessary work.
+      const observer = new MutationObserver(() => {
+        const count = grid.querySelectorAll(".video-card").length;
+        if (count !== lastCardCount) {
+          currentPage = 1;
+        }
+        queueUpdate();
+      });
+      observer.observe(grid, { childList: true, subtree: true });
 
-      // Initial and delayed passes cover scripts that populate the grid asynchronously.
-      document.addEventListener('DOMContentLoaded', () => renderPagination(true));
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () => renderPagination(true), { once: true });
+      } else {
+        renderPagination(true);
+      }
       queueUpdate();
     })();
   </script>
