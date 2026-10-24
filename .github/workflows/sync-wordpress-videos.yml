@@ -1,3 +1,4 @@
+
 name: Sync WordPress Videos
 
 on:
@@ -38,6 +39,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -98,38 +101,38 @@ jobs:
           echo "[SYNC] Review the log line 'Rejected/unavailable video URLs skipped' for CDN-denied or invalid MP4 sources."
 
       - name: Commit checkpoint, catalog and thumbnails
-    shell: bash
-    run: |
-      set -Eeuo pipefail
+        shell: bash
+        run: |
+          set -Eeuo pipefail
 
-      echo "[COMMIT] Checking for changes..."
+          echo "[COMMIT] Checking for changes..."
 
-      if [[ -z "$(git status --porcelain)" ]]; then
-        echo "[COMMIT] No changes to commit."
-        exit 0
-      fi
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "[COMMIT] No changes to commit."
+            exit 0
+          fi
 
-      git config user.name "github-actions[bot]"
-      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      git add assets/data/videos.json \
-              assets/data/.video_import_state.json \
-              assets/thumb
+          git add assets/data/videos.json \
+                  assets/data/.video_import_state.json \
+                  assets/thumb
 
-      if git diff --cached --quiet; then
-        echo "[COMMIT] No staged changes to commit."
-        exit 0
-      fi
+          if git diff --cached --quiet; then
+            echo "[COMMIT] No staged changes to commit."
+            exit 0
+          fi
 
-      git commit -m "Batch sync WordPress videos"
+          git commit -m "Batch sync WordPress videos"
 
-      echo "[COMMIT] Fetching latest remote changes..."
-      git fetch origin main
+          echo "[COMMIT] Fetching latest remote changes..."
+          git fetch origin main
 
-      echo "[COMMIT] Rebasing onto latest main..."
-      git rebase origin/main
+          echo "[COMMIT] Rebasing onto latest main..."
+          git rebase origin/main
 
-      echo "[COMMIT] Pushing changes..."
-      git push origin HEAD:main
+          echo "[COMMIT] Pushing changes..."
+          git push origin HEAD:main
 
-      echo "[COMMIT] Finished successfully."
+          echo "[COMMIT] Finished successfully."
