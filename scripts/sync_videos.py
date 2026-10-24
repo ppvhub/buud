@@ -87,6 +87,32 @@ def find_video_url(content):
         if direct_mp4(value): return value
     return ""
 
+def duration_from_mp4(url):
+    """Probe remote MP4 metadata with ffprobe (HTTP range requests; no full download intended)."""
+    if not url or not url.startswith("https://"):
+        return ""
+    try:
+        result = subprocess.run(
+            ["ffprobe", "-v", "error", "-rw_timeout", "15000000",
+             "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", url],
+            capture_output=True, text=True, timeout=25, check=False
+        )
+        if result.returncode != 0:
+            detail = (result.stderr or "").strip().splitlines()
+            if detail:
+                log(f"ffprobe duration unavailable: {detail[-1][:180]}")
+            return ""
+        seconds = float((result.stdout or "").strip())
+        if seconds <= 0:
+            return ""
+        total = int(seconds + 0.5)
+        hours, rem = divmod(total, 3600)
+        minutes, secs = divmod(rem, 60)
+        return f"{hours:02d}:{minutes:02d}:{secs:02d}" if hours else f"{minutes}:{secs:02d}"
+    except (OSError, ValueError, subprocess.TimeoutExpired) as e:
+        log(f"ffprobe duration unavailable: {e}")
+        return ""
+
 def parse_post(post):
     link = post.get("link", "")
     if not link: return None
@@ -112,8 +138,10 @@ def parse_post(post):
         duration = parse_duration(meta(page, key))
         if duration: break
     if not duration:
-        m = re.search(r"""["']duration["']\s*:\s*["'](PT[^"']+)["']""", page, re.I)
+        m = re.search(r"""["']duration["']\s*:\s*["']([^"']+)["']""", page, re.I)
         if m: duration = parse_duration(m.group(1))
+    if not duration:
+        duration = duration_from_mp4(video_url)
     return {"source_id": str(post.get("id", "")), "title": title, "video_url": video_url,
             "thumb_url": thumb, "date": date, "link": link, "duration": duration}
 
@@ -227,8 +255,7 @@ def main():
             continue
         duration = item["duration"]
         if not duration:
-            # If source page exposes no duration metadata, ask the browser to display a placeholder.
-            duration = "00:00"
+            log(f"WARNING: duration could not be detected for {item['title']}; leaving it blank rather than showing a false 00:00.")
         additions.append({"id":video_id,"title":item["title"] or f"Video {next_num}",
             "thumb":f"assets/thumb/{video_id}.webp","views":random_views(),"duration":duration,
             "video":encode_url(item["video_url"],video_id),
