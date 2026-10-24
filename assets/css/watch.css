@@ -258,9 +258,9 @@
 }
 
 .related-section{
-    grid-column:1;
     min-width:0;
-    margin-top:8px;
+    width:100%;
+    margin-top:22px;
 }
 
 .related-grid{
@@ -333,7 +333,6 @@
 }
 
 @media(max-width:1024px){
-    .related-section{grid-column:1;}
     .related-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
 }
 
