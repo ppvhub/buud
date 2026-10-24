@@ -95,6 +95,7 @@ jobs:
           python -u -X faulthandler scripts/sync_videos.py "${args[@]}"
 
           echo "[SYNC] Python script completed successfully."
+          echo "[SYNC] Review the log line 'Rejected/unavailable video URLs skipped' for CDN-denied or invalid MP4 sources."
 
       - name: Commit checkpoint, catalog and thumbnails
         shell: bash
