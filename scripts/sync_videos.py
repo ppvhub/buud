@@ -16,6 +16,7 @@ REQUEST_TIMEOUT = 20
 MAX_RETRIES = 2
 MAX_THUMB_BYTES = 8 * 1024 * 1024
 PER_PAGE = 100
+REJECTED_VIDEO_URLS = 0
 
 def log(message): print(message, flush=True)
 
@@ -55,6 +56,47 @@ def direct_mp4(url):
         p = urlparse(html.unescape(url.strip()))
         return p.scheme == "https" and bool(p.netloc) and p.path.lower().endswith(".mp4")
     except Exception: return False
+
+def validate_video_url(url, referer=""):
+    """Check that a candidate MP4 is accessible and returns media, not a denial page.
+
+    A small Range GET is used instead of HEAD because many media CDNs reject HEAD
+    requests or require a browser-like Referer. Only a tiny prefix is read.
+    """
+    if not direct_mp4(url):
+        return False, "URL is not a direct HTTPS .mp4 URL"
+
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "video/mp4,video/*;q=0.9,application/octet-stream;q=0.8,*/*;q=0.5",
+        "Range": "bytes=0-1023",
+        "Connection": "close",
+    }
+    if referer:
+        headers["Referer"] = referer
+
+    try:
+        req = Request(url, headers=headers)
+        with urlopen(req, timeout=15) as response:
+            status = getattr(response, "status", 200)
+            content_type = (response.headers.get("Content-Type") or "").split(";", 1)[0].strip().lower()
+            prefix = response.read(1024)
+
+            if status >= 400:
+                return False, f"HTTP {status}"
+            if content_type in ("text/html", "application/xhtml+xml") or content_type.startswith("text/"):
+                return False, f"server returned {content_type or 'HTML/text'} instead of video"
+            if content_type.startswith("video/"):
+                return True, f"HTTP {status}, {content_type}"
+            # Some CDNs label MP4 as application/octet-stream or omit the MIME type.
+            # Verify the ISO BMFF 'ftyp' box before accepting those responses.
+            if content_type in ("application/octet-stream", "") and len(prefix) >= 8 and prefix[4:8] == b"ftyp":
+                return True, f"HTTP {status}, MP4 signature detected"
+            return False, f"unexpected Content-Type {content_type or '(missing)'}; response is not recognisable as MP4"
+    except HTTPError as e:
+        return False, f"HTTP {e.code} {e.reason}"
+    except (URLError, TimeoutError, OSError) as e:
+        return False, f"request failed: {e}"
 
 def meta(content, key):
     pattern = r"<meta\b(?=[^>]*\b(?:itemprop|property|name)\s*=\s*[\"']" + re.escape(key) + r"[\"'])[^>]*>"
@@ -161,6 +203,13 @@ def parse_post(post):
     if not video_url:
         log(f"NO MP4 found: {link}")
         return None
+    global REJECTED_VIDEO_URLS
+    is_valid, validation_detail = validate_video_url(video_url, referer=link)
+    if not is_valid:
+        REJECTED_VIDEO_URLS += 1
+        log(f"SKIP rejected/unavailable MP4: {video_url} ({validation_detail})")
+        return None
+    log(f"MP4 source OK: {validation_detail}")
     title_html = (post.get("title") or {}).get("rendered") or post.get("slug") or "Untitled"
     title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", title_html))).strip()
     thumb = meta(page, "og:image") or meta(page, "thumbnailUrl")
@@ -312,6 +361,7 @@ def main():
         if not state["active"]: log(f"FULL import complete: scanned {state['scanned']}, created {state['created']}.")
     else:
         log(f"Recent sync saved: {len(additions)} videos added.")
+    log(f"Rejected/unavailable video URLs skipped: {REJECTED_VIDEO_URLS}")
     log("Sync script finished.")
 
 if __name__ == "__main__":
