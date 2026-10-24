@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Resumable WordPress video importer. Processes one batch per invocation."""
-import argparse, base64, html, json, os, re, sys, time, random, subprocess
+import argparse, base64, html, json, os, re, sys, time, random
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
@@ -80,7 +80,7 @@ def parse_duration(value):
     return ""
 
 def find_duration_in_page(content):
-    """Extract duration from common page metadata/player config before using ffprobe."""
+    """Extract duration from common page metadata/player config."""
     for key in ("duration", "video:duration", "og:video:duration", "length"):
         value = parse_duration(meta(content, key))
         if value:
@@ -109,40 +109,6 @@ def find_video_url(content):
         if direct_mp4(value): return value
     return ""
 
-def duration_from_mp4(url):
-    """Quick fallback probe of remote MP4 metadata; strictly time-limited."""
-    if not url or not url.startswith("https://"):
-        return ""
-    try:
-        # Remote servers may not support byte-range/seek requests. Keep this fallback
-        # short so one problematic MP4 cannot stall an entire 100-post batch.
-        result = subprocess.run(
-            [
-                "ffprobe", "-v", "error",
-                "-rw_timeout", "5000000",
-                "-probesize", "256k",
-                "-analyzeduration", "1000000",
-                "-show_entries", "format=duration",
-                "-of", "default=noprint_wrappers=1:nokey=1",
-                url,
-            ],
-            capture_output=True, text=True, timeout=8, check=False
-        )
-        if result.returncode != 0:
-            detail = (result.stderr or "").strip().splitlines()
-            if detail:
-                log(f"Duration probe skipped (source did not provide readable metadata): {detail[-1][:120]}")
-            return ""
-        seconds = float((result.stdout or "").strip())
-        if seconds <= 0:
-            return ""
-        total = int(seconds + 0.5)
-        hours, rem = divmod(total, 3600)
-        minutes, secs = divmod(rem, 60)
-        return f"{hours:02d}:{minutes:02d}:{secs:02d}" if hours else f"{minutes}:{secs:02d}"
-    except (OSError, ValueError, subprocess.TimeoutExpired) as e:
-        log(f"Duration probe skipped: {e}")
-        return ""
 
 def parse_post(post):
     link = post.get("link", "")
@@ -164,10 +130,8 @@ def parse_post(post):
         media = post.get("_embedded", {}).get("wp:featuredmedia", [])
         if media: thumb = media[0].get("source_url", "")
     date = meta(page, "uploadDate") or post.get("date_gmt") or post.get("date") or ""
-    # Prefer page metadata because it is much faster than probing the MP4.
+    # Read duration from page metadata only; leave it blank if unavailable.
     duration = find_duration_in_page(page)
-    if not duration:
-        duration = duration_from_mp4(video_url)
     return {"source_id": str(post.get("id", "")), "title": title, "video_url": video_url,
             "thumb_url": thumb, "date": date, "link": link, "duration": duration}
 
