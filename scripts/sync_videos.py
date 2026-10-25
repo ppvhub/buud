@@ -273,7 +273,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--full", action="store_true", help="start or continue full import in batches of 100")
     parser.add_argument("--reset", action="store_true", help="DANGER: clear videos.json and thumbnails, then start fresh")
-    parser.add_argument("--batch-size", type=int, default=100)
+    parser.add_argument("--batch-size", type=int, default=10)
     args = parser.parse_args()
     if args.batch_size < 1: raise RuntimeError("--batch-size must be >= 1")
     log("Sync script started.")
