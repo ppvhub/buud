@@ -1,7 +1,187 @@
 {
   "version": "1.3",
-  "updated": "2026-10-31T02:44:50.985020+00:00",
+  "updated": "2026-10-31T08:56:11.016388+00:00",
   "videos": [
+    {
+      "id": "video320",
+      "title": "31st",
+      "thumb": "assets/thumb/video320.webp",
+      "views": "816.3K",
+      "duration": "8:02",
+      "video": {
+        "provider": "videy",
+        "encrypted": "Bjg4GWYEBQZ0diU2UWY3Qj5VW1coOCp3XCw2GHkKQUM4LSA=",
+        "iv": "HYL320V7UH2Y",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "64136",
+        "url": "https://baddiehub.com/31st/",
+        "date": "2025-10-31T18:07:22+00:00"
+      }
+    },
+    {
+      "id": "video321",
+      "title": "Tokyo Leigh",
+      "thumb": "assets/thumb/video321.webp",
+      "views": "795.3K",
+      "duration": "19:24",
+      "video": {
+        "provider": "videy",
+        "encrypted": "eycsGyNlXUEYdiVZLHkjQDlUW1coOCoYITMiGn4LQUM4LSA=",
+        "iv": "HYL321Q5AWO6",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "64133",
+        "url": "https://baddiehub.com/tokyo-leigh-9/",
+        "date": "2025-10-31T18:07:18+00:00"
+      }
+    },
+    {
+      "id": "video322",
+      "title": "radical4what",
+      "thumb": "assets/thumb/video322.webp",
+      "views": "742.9K",
+      "duration": "9:17",
+      "video": {
+        "provider": "videy",
+        "encrypted": "bTwufj9TW1oudiUjOmIhJSJXW1coOCpiNyggf2UIQUM4LSA=",
+        "iv": "HYL322JPCLYL",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "64130",
+        "url": "https://baddiehub.com/radical4what-5/",
+        "date": "2025-10-31T18:07:14+00:00"
+      }
+    },
+    {
+      "id": "video323",
+      "title": "Keiyana",
+      "thumb": "assets/thumb/video323.webp",
+      "views": "507.9K",
+      "duration": "24:39",
+      "video": {
+        "provider": "videy",
+        "encrypted": "AzIpZl9fBSl2JSA0GSAxIFZbVyg4KmE5UyFrZwlBQzgtIA==",
+        "iv": "HYL323HDB7WO",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "64123",
+        "url": "https://baddiehub.com/keiyana-27/",
+        "date": "2025-10-30T17:32:41+00:00"
+      }
+    },
+    {
+      "id": "video324",
+      "title": "Jenise Hart",
+      "thumb": "assets/thumb/video324.webp",
+      "views": "781.7K",
+      "duration": "11:45",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cjUuZVYHWDl2JSRUaCc2I1FbVyg4KmVZIiZsZA5BQzgtIA==",
+        "iv": "HYL324KCEF7K",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "64120",
+        "url": "https://baddiehub.com/jenise-hart/",
+        "date": "2025-10-30T17:32:36+00:00"
+      }
+    },
+    {
+      "id": "video325",
+      "title": "Mulan Vuitton",
+      "thumb": "assets/thumb/video325.webp",
+      "views": "154.3K",
+      "duration": "7:22",
+      "video": {
+        "provider": "videy",
+        "encrypted": "AzknZFJTVCN2JTwrGSs/IlBbVyg4Kn0mUyplZQ9BQzgtIA==",
+        "iv": "HYL325JJI7HS",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "64111",
+        "url": "https://baddiehub.com/mulan-vuitton-19/",
+        "date": "2025-10-30T17:32:20+00:00"
+      }
+    },
+    {
+      "id": "video326",
+      "title": "Gigi Lysette",
+      "thumb": "assets/thumb/video326.webp",
+      "views": "510.2K",
+      "duration": "16:47",
+      "video": {
+        "provider": "videy",
+        "encrypted": "dzE4YUdcAS92JT4ubSMgJ1NbVyg4Kn8jJyJ6YAxBQzgtIA==",
+        "iv": "HYL326OUACMQ",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "64105",
+        "url": "https://baddiehub.com/gigi-lysette-3/",
+        "date": "2025-10-30T17:32:08+00:00"
+      }
+    },
+    {
+      "id": "video327",
+      "title": "Rainhearts",
+      "thumb": "assets/thumb/video327.webp",
+      "views": "932.2K",
+      "duration": "1:19",
+      "video": {
+        "provider": "videy",
+        "encrypted": "BiE7GX9YQV8tdiUqUX80QiVSW1coOCprXDU1GGINQUM4LSA=",
+        "iv": "HYL327M7VQ2E",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "64102",
+        "url": "https://baddiehub.com/rainhearts-2/",
+        "date": "2025-10-30T17:32:04+00:00"
+      }
+    },
+    {
+      "id": "video328",
+      "title": "Ghostface",
+      "thumb": "assets/thumb/video328.webp",
+      "views": "367.1K",
+      "duration": "11:43",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ekQqZWUJXVIudiU+LRolPj1dW1coOCp/IFAkZHoCQUM4LSA=",
+        "iv": "HYL328UKG4NQ",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "64096",
+        "url": "https://baddiehub.com/ghostface/",
+        "date": "2025-10-30T17:31:54+00:00"
+      }
+    },
+    {
+      "id": "video329",
+      "title": "Lola Cheeks",
+      "thumb": "assets/thumb/video329.webp",
+      "views": "817.2K",
+      "duration": "30:20",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZEM+alZ+cQR2JVo1flEmLFxbVyg4Khs4NFB8awNBQzgtIA==",
+        "iv": "HYL329DS3PV5",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "64093",
+        "url": "https://baddiehub.com/lola-cheeks-2/",
+        "date": "2025-10-30T17:31:49+00:00"
+      }
+    },
     {
       "id": "video310",
       "title": "Melztube",
