@@ -1,7 +1,187 @@
 {
   "version": "1.3",
-  "updated": "2026-10-31T08:56:11.016388+00:00",
+  "updated": "2026-10-31T14:58:22.197297+00:00",
   "videos": [
+    {
+      "id": "video330",
+      "title": "Jadeteen",
+      "thumb": "assets/thumb/video330.webp",
+      "views": "263.6K",
+      "duration": "14:39",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fz1feSJCXkoidiU4KGNQIiVVWlcoOCp5JSlReGIKQEM4LSA=",
+        "iv": "HYL330MW2MKW",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "63729",
+        "url": "https://baddiehub.com/jadeteen-21/",
+        "date": "2025-10-21T12:56:13+00:00"
+      }
+    },
+    {
+      "id": "video331",
+      "title": "Karma",
+      "thumb": "assets/thumb/video331.webp",
+      "views": "552.8K",
+      "duration": "5:33",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cT0keDgHCgU8diU8JmMrIzJUWlcoOCp9KykqeXULQEM4LSA=",
+        "iv": "HYL331ZVIMES",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "63726",
+        "url": "https://baddiehub.com/karma-18/",
+        "date": "2025-10-21T12:56:08+00:00"
+      }
+    },
+    {
+      "id": "video332",
+      "title": "Nova",
+      "thumb": "assets/thumb/video332.webp",
+      "views": "669.0K",
+      "duration": "8:55",
+      "video": {
+        "provider": "videy",
+        "encrypted": "AjI9HDlaUQErdiU9VWwyRytXWlcoOCp8WCYzHWwIQEM4LSA=",
+        "iv": "HYL332C2PB6R",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "63723",
+        "url": "https://baddiehub.com/nova-5/",
+        "date": "2025-10-21T12:56:03+00:00"
+      }
+    },
+    {
+      "id": "video333",
+      "title": "Scream",
+      "thumb": "assets/thumb/video333.webp",
+      "views": "285.8K",
+      "duration": "32:38",
+      "video": {
+        "provider": "videy",
+        "encrypted": "YyErYHtDX1E+diU+NH8kOyNWWlcoOCp/OTUlYWQJQEM4LSA=",
+        "iv": "HYL333KNFQWQ",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "63720",
+        "url": "https://baddiehub.com/scream-3/",
+        "date": "2025-10-21T12:55:58+00:00"
+      }
+    },
+    {
+      "id": "video334",
+      "title": "Lil Bony",
+      "thumb": "assets/thumb/video334.webp",
+      "views": "670.2K",
+      "duration": "7:21",
+      "video": {
+        "provider": "videy",
+        "encrypted": "Azc/ZEVGCjt2JTokGSUnIlFaVyg4KnspUyR9ZQ5AQzgtIA==",
+        "iv": "HYL334JRG7GU",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "63714",
+        "url": "https://baddiehub.com/lil-bony-3/",
+        "date": "2025-10-21T12:55:49+00:00"
+      }
+    },
+    {
+      "id": "video335",
+      "title": "Estefani Santos",
+      "thumb": "assets/thumb/video335.webp",
+      "views": "613.7K",
+      "duration": "8:56",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fyYqGVNDRVovdiU9KHglQlpQWlcoOCp8JTIkGB0PQEM4LSA=",
+        "iv": "HYL33527GVKR",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "63708",
+        "url": "https://baddiehub.com/estefani-santos/",
+        "date": "2025-10-21T12:55:40+00:00"
+      }
+    },
+    {
+      "id": "video336",
+      "title": "Kayley Gunner",
+      "thumb": "assets/thumb/video336.webp",
+      "views": "359.3K",
+      "duration": "10:36",
+      "video": {
+        "provider": "videy",
+        "encrypted": "eD40b1UFXF4ndiUgL2A7NF5TWlcoOCphIio6bhkMQEM4LSA=",
+        "iv": "HYL3366AYNLO",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "63702",
+        "url": "https://baddiehub.com/kayley-gunner-3/",
+        "date": "2025-10-21T12:55:32+00:00"
+      }
+    },
+    {
+      "id": "video337",
+      "title": "Payton Preslee & Nicole Doshi",
+      "thumb": "assets/thumb/video337.webp",
+      "views": "573.8K",
+      "duration": "56:45",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZyYiYgh/YHUPdiVaMHgtOS5SWlcoOCobPTIsY2kNQEM4LSA=",
+        "iv": "HYL337FLOVS5",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "63696",
+        "url": "https://baddiehub.com/payton-preslee-nicole-doshi/",
+        "date": "2025-10-21T12:55:23+00:00"
+      }
+    },
+    {
+      "id": "video338",
+      "title": "MissBNasty",
+      "thumb": "assets/thumb/video338.webp",
+      "views": "229.2K",
+      "duration": "14:05",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ciBeYWYABAt5diUrJX5ROjldWlcoOCpqKDRQYH4CQEM4LSA=",
+        "iv": "HYL338QO3PFD",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "63692",
+        "url": "https://baddiehub.com/missbnasty-3/",
+        "date": "2025-10-20T15:46:19+00:00"
+      }
+    },
+    {
+      "id": "video339",
+      "title": "Legaci",
+      "thumb": "assets/thumb/video339.webp",
+      "views": "186.7K",
+      "duration": "8:21",
+      "video": {
+        "provider": "videy",
+        "encrypted": "Yjsvf1RTAFg7diUjNWUgJFpcWlcoOCpiOC8hfh0DQEM4LSA=",
+        "iv": "HYL3392QBKVL",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "63683",
+        "url": "https://baddiehub.com/legaci-4/",
+        "date": "2025-10-20T15:46:05+00:00"
+      }
+    },
     {
       "id": "video320",
       "title": "31st",
