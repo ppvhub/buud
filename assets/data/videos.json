@@ -1,7 +1,187 @@
 {
   "version": "1.3",
-  "updated": "2026-11-01T07:47:39.169217+00:00",
+  "updated": "2026-11-01T14:35:34.956238+00:00",
   "videos": [
+    {
+      "id": "video380",
+      "title": "Vivian Taylor",
+      "thumb": "assets/thumb/video380.webp",
+      "views": "845.9K",
+      "duration": "27:18",
+      "video": {
+        "provider": "videy",
+        "encrypted": "Az8jaUdETlo6diU9VGEsMltVUVcoOCp8WSstaBwKS0M4LSA=",
+        "iv": "HYL3803GNO7R",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "61707",
+        "url": "https://baddiehub.com/vivian-taylor-24/",
+        "date": "2025-08-27T16:08:19+00:00"
+      }
+    },
+    {
+      "id": "video381",
+      "title": "Auhneesh",
+      "thumb": "assets/thumb/video381.webp",
+      "views": "455.1K",
+      "duration": "11:23",
+      "video": {
+        "provider": "videy",
+        "encrypted": "Bio+bD9CXVYidiVbUXQxNyNUUVcoOCoaXD4wbWQLS0M4LSA=",
+        "iv": "HYL381KBSZ24",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "61704",
+        "url": "https://baddiehub.com/auhneesh-42/",
+        "date": "2025-08-27T16:08:15+00:00"
+      }
+    },
+    {
+      "id": "video382",
+      "title": "Jakara Mitchell",
+      "thumb": "assets/thumb/video382.webp",
+      "views": "794.9K",
+      "duration": "12:01",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fjY/HFNZfXYlOTFvKDM6V1FXKDgqeDwlKWl9CEtDOC0g",
+        "iv": "HYL382RFJARV",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "61701",
+        "url": "https://baddiehub.com/jakara-mitchell-4/",
+        "date": "2025-08-27T16:08:11+00:00"
+      }
+    },
+    {
+      "id": "video383",
+      "title": "Gigi Vergara",
+      "thumb": "assets/thumb/video383.webp",
+      "views": "271.4K",
+      "duration": "35:52",
+      "video": {
+        "provider": "videy",
+        "encrypted": "YUNaHAUIATt2JSEhe1FCWlZRVyg4KmAsMVAYHQlLQzgtIA==",
+        "iv": "HYL383273UBN",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "61698",
+        "url": "https://baddiehub.com/gigi-vergara-5/",
+        "date": "2025-08-27T16:08:07+00:00"
+      }
+    },
+    {
+      "id": "video384",
+      "title": "Alanna Pow",
+      "thumb": "assets/thumb/video384.webp",
+      "views": "281.1K",
+      "duration": "24:47",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ATwgfFJSBy52JV03Gy44OlFRVyg4Khw6US9ifQ5LQzgtIA==",
+        "iv": "HYL384RML5T2",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "61695",
+        "url": "https://baddiehub.com/alanna-pow-13/",
+        "date": "2025-08-27T16:08:03+00:00"
+      }
+    },
+    {
+      "id": "video385",
+      "title": "Jada Stevens",
+      "thumb": "assets/thumb/video385.webp",
+      "views": "750.9K",
+      "duration": "4:13",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZzEhZUVABiF2JSpUfSM5I1BRVyg4KmtZNyJjZA9LQzgtIA==",
+        "iv": "HYL385KLAS7E",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "61722",
+        "url": "https://baddiehub.com/jada-stevens-23/",
+        "date": "2025-08-27T16:07:57+00:00"
+      }
+    },
+    {
+      "id": "video386",
+      "title": "KonKen",
+      "thumb": "assets/thumb/video386.webp",
+      "views": "893.0K",
+      "duration": "3:33",
+      "video": {
+        "provider": "videy",
+        "encrypted": "bjpbag8LRjh2JVgpdChDLFNRVyg4KhkkPikZawxLQzgtIA==",
+        "iv": "HYL386D6JZJ7",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "61678",
+        "url": "https://baddiehub.com/konken/",
+        "date": "2025-08-26T16:58:41+00:00"
+      }
+    },
+    {
+      "id": "video387",
+      "title": "Lillianette & Trixi Brooks",
+      "thumb": "assets/thumb/video387.webp",
+      "views": "348.6K",
+      "duration": "27:11",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ckYsdAUBAXR2JSpWaFQ0MlJRVyg4KmtbIlVudQ1LQzgtIA==",
+        "iv": "HYL387ZA6F5E",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "61675",
+        "url": "https://baddiehub.com/lillianette-trixi-brooks/",
+        "date": "2025-08-26T16:58:36+00:00"
+      }
+    },
+    {
+      "id": "video388",
+      "title": "Mia Monroe",
+      "thumb": "assets/thumb/video388.webp",
+      "views": "738.2K",
+      "duration": "12:47",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZSpYbF8NUSh2JSArfzhAKl1RVyg4KmEmNTkabQJLQzgtIA==",
+        "iv": "HYL388B5ZQHO",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "61672",
+        "url": "https://baddiehub.com/mia-monroe-14/",
+        "date": "2025-08-26T16:58:32+00:00"
+      }
+    },
+    {
+      "id": "video389",
+      "title": "Mz Dani",
+      "thumb": "assets/thumb/video389.webp",
+      "views": "496.8K",
+      "duration": "18:10",
+      "video": {
+        "provider": "videy",
+        "encrypted": "dSA1ZgwPBnl2JTZWbzItIFxRVyg4KndbJTN3ZwNLQzgtIA==",
+        "iv": "HYL389HXPA5Y",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "61669",
+        "url": "https://baddiehub.com/mz-dani-26/",
+        "date": "2025-08-26T16:58:28+00:00"
+      }
+    },
     {
       "id": "video370",
       "title": "Comatozze",
