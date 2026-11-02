@@ -1,7 +1,187 @@
 {
   "version": "1.3",
-  "updated": "2026-11-01T22:51:24.237547+00:00",
+  "updated": "2026-11-02T01:57:07.132051+00:00",
   "videos": [
+    {
+      "id": "video408",
+      "title": "Summer",
+      "thumb": "assets/thumb/video408.webp",
+      "views": "466.3K",
+      "duration": "9:17",
+      "video": {
+        "provider": "videy",
+        "encrypted": "Yjc/fQFZXCN2JSI0eCUnO11ZUCg4KmM5MiR9fAJDRDgtIA==",
+        "iv": "HYL408SRGVWM",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "60494",
+        "url": "https://baddiehub.com/summer-44/",
+        "date": "2025-07-23T16:26:20+00:00"
+      }
+    },
+    {
+      "id": "video409",
+      "title": "Blah Gigi & Mami Giany",
+      "thumb": "assets/thumb/video409.webp",
+      "views": "481.9K",
+      "duration": "13:05",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZCEgF1JbPHYlN1RvMiQlXFlQKDgqdlklM35iA0NEOC0g",
+        "iv": "HYL409MQPA7X",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "60491",
+        "url": "https://baddiehub.com/blah-gigi-mami-giany/",
+        "date": "2025-07-23T16:26:15+00:00"
+      }
+    },
+    {
+      "id": "video410",
+      "title": "Reina Eliz",
+      "thumb": "assets/thumb/video410.webp",
+      "views": "966.6K",
+      "duration": "5:44",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ByE1HgYBNHYlJjNjUSQwVVhQKDgqZz4pUH53CkJEOC0g",
+        "iv": "HYL410XQ3MPI",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "60488",
+        "url": "https://baddiehub.com/reina-eliz/",
+        "date": "2025-07-23T16:26:11+00:00"
+      }
+    },
+    {
+      "id": "video411",
+      "title": "Tatted Mamii",
+      "thumb": "assets/thumb/video411.webp",
+      "views": "187.6K",
+      "duration": "14:15",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cSguGQZeVSF2JT4zazo2X1RYUCg4Kn8+ITtsGAtCRDgtIA==",
+        "iv": "HYL4117CXEPQ",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "60485",
+        "url": "https://baddiehub.com/tatted-mamii-5/",
+        "date": "2025-07-23T16:26:06+00:00"
+      }
+    },
+    {
+      "id": "video412",
+      "title": "Mayhashira & Kali Roses",
+      "thumb": "assets/thumb/video412.webp",
+      "views": "912.5K",
+      "duration": "41:25",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cjM8fVwIDDp2JSo0aCEkO1dYUCg4Kms5IiB+fAhCRDgtIA==",
+        "iv": "HYL412SQCFWE",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "60482",
+        "url": "https://baddiehub.com/mayhashira-kali-roses/",
+        "date": "2025-07-23T16:26:01+00:00"
+      }
+    },
+    {
+      "id": "video413",
+      "title": "LaBella Diabla",
+      "thumb": "assets/thumb/video413.webp",
+      "views": "791.2K",
+      "duration": "39:40",
+      "video": {
+        "provider": "videy",
+        "encrypted": "Y0I4b1FIDT92JSEieVAgKVZYUCg4KmAvM1F6bglCRDgtIA==",
+        "iv": "HYL413AU2WAN",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "60479",
+        "url": "https://baddiehub.com/labella-diabla-7/",
+        "date": "2025-07-23T16:25:56+00:00"
+      }
+    },
+    {
+      "id": "video414",
+      "title": "Nella",
+      "thumb": "assets/thumb/video414.webp",
+      "views": "318.1K",
+      "duration": "4:46",
+      "video": {
+        "provider": "videy",
+        "encrypted": "YyRYGgEAP3YlJzNkNSFdUVhQKDgqZj4uNHsaDkJEOC0g",
+        "iv": "HYL4145TWJPH",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "60476",
+        "url": "https://baddiehub.com/nella-3/",
+        "date": "2025-07-23T16:25:52+00:00"
+      }
+    },
+    {
+      "id": "video415",
+      "title": "thelatina",
+      "thumb": "assets/thumb/video415.webp",
+      "views": "717.0K",
+      "duration": "2:05",
+      "video": {
+        "provider": "videy",
+        "encrypted": "dzk4HVNLAil2JT45bSsgW1BYUCg4Kn80Jyp6HA9CRDgtIA==",
+        "iv": "HYL4153UICZQ",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "60473",
+        "url": "https://baddiehub.com/thelatina-18/",
+        "date": "2025-07-23T16:25:46+00:00"
+      }
+    },
+    {
+      "id": "video416",
+      "title": "Hime Tsu",
+      "thumb": "assets/thumb/video416.webp",
+      "views": "212.2K",
+      "duration": "16:54",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cCE1GGVZBHYlWzt/JiQwU1hQKDgqGjY1J353DEJEOC0g",
+        "iv": "HYL416XQDQX4",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "60470",
+        "url": "https://baddiehub.com/hime-tsu/",
+        "date": "2025-07-23T16:25:42+00:00"
+      }
+    },
+    {
+      "id": "video417",
+      "title": "Destiny DSL",
+      "thumb": "assets/thumb/video417.webp",
+      "views": "996.8K",
+      "duration": "24:55",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZkRfHFQEVSF2JV1RfFZHWlJYUCg4KhxcNlcdHQ1CRDgtIA==",
+        "iv": "HYL417224R22",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "60467",
+        "url": "https://baddiehub.com/destiny-dsl-2/",
+        "date": "2025-07-23T16:25:37+00:00"
+      }
+    },
     {
       "id": "video400",
       "title": "Iris Ivy",
