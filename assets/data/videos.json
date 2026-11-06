@@ -1,7 +1,187 @@
 {
   "version": "1.3",
-  "updated": "2026-11-06T10:33:09.800106+00:00",
+  "updated": "2026-11-06T17:07:56.903426+00:00",
   "videos": [
+    {
+      "id": "video578",
+      "title": "Jacqueline",
+      "thumb": "assets/thumb/video578.webp",
+      "views": "944.8K",
+      "duration": "29:29",
+      "video": {
+        "provider": "videy",
+        "encrypted": "czMudDBZZUQGdiUjJG0hLyFdXlEoOCpiKScgdWYCREU4LSA=",
+        "iv": "HYL578IZCCGL",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "53464",
+        "url": "https://baddiehub.com/jacqueline-2/",
+        "date": "2024-11-16T12:33:44+00:00"
+      }
+    },
+    {
+      "id": "video579",
+      "title": "Prada",
+      "thumb": "assets/thumb/video579.webp",
+      "views": "681.0K",
+      "duration": "33:15",
+      "video": {
+        "provider": "videy",
+        "encrypted": "Zj9ZF0BdKHYlWSV3MDpcXF5RKDgqGCg9MWAbA0RFOC0g",
+        "iv": "HYL5794ORYF6",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "53460",
+        "url": "https://baddiehub.com/prada-2/",
+        "date": "2024-11-15T10:24:57+00:00"
+      }
+    },
+    {
+      "id": "video580",
+      "title": "Ryleigh",
+      "thumb": "assets/thumb/video580.webp",
+      "views": "524.8K",
+      "duration": "4:09",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZyM4HkBXPHYlIihrMSY9VVFRKDgqYyUhMHx6CktFOC0g",
+        "iv": "HYL580USSEKM",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "53457",
+        "url": "https://baddiehub.com/ryleigh-27/",
+        "date": "2024-11-15T10:24:16+00:00"
+      }
+    },
+    {
+      "id": "video581",
+      "title": "Willow Ryder",
+      "thumb": "assets/thumb/video581.webp",
+      "views": "523.0K",
+      "duration": "27:53",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ekUmH15iKXYlIyF3LEAjVFFRKDgqYiw9LRpkC0tFOC0g",
+        "iv": "HYL581K5NYBL",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "53451",
+        "url": "https://baddiehub.com/willow-ryder-32/",
+        "date": "2024-11-15T10:22:45+00:00"
+      }
+    },
+    {
+      "id": "video582",
+      "title": "Licia P",
+      "thumb": "assets/thumb/video582.webp",
+      "views": "384.2K",
+      "duration": "26:11",
+      "video": {
+        "provider": "videy",
+        "encrypted": "YDw+egVRVzp2JSpQei4mPFdRUSg4KmtdMC98ewhLRTgtIA==",
+        "iv": "HYL582TSLT3E",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "53447",
+        "url": "https://baddiehub.com/licia-p/",
+        "date": "2024-11-15T10:21:59+00:00"
+      }
+    },
+    {
+      "id": "video583",
+      "title": "Melztube",
+      "thumb": "assets/thumb/video583.webp",
+      "views": "676.3K",
+      "duration": "4:53",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZyNaHV1cLXYlW1RiMSZfVlFRKDgqGlkoMHwYCUtFOC0g",
+        "iv": "HYL5837SSL74",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "53444",
+        "url": "https://baddiehub.com/melztube-25/",
+        "date": "2024-11-15T10:21:03+00:00"
+      }
+    },
+    {
+      "id": "video584",
+      "title": "Savannah Bond",
+      "thumb": "assets/thumb/video584.webp",
+      "views": "336.0K",
+      "duration": "44:40",
+      "video": {
+        "provider": "videy",
+        "encrypted": "bSoieV5LXD92JVwqdzg6P1FRUSg4Kh0nPTlgeA5LRTgtIA==",
+        "iv": "HYL584WOZYI3",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "53438",
+        "url": "https://baddiehub.com/savannah-bond-18/",
+        "date": "2024-11-15T10:19:25+00:00"
+      }
+    },
+    {
+      "id": "video585",
+      "title": "Kianna Dior",
+      "thumb": "assets/thumb/video585.webp",
+      "views": "574.6K",
+      "duration": "13:28",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZCQjfXZbWVwHdiUuM3osJl9QUVEoOCpvPjAtfBgPS0U4LSA=",
+        "iv": "HYL5857SNTPA",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "53435",
+        "url": "https://baddiehub.com/kianna-dior-6/",
+        "date": "2024-11-15T10:18:46+00:00"
+      }
+    },
+    {
+      "id": "video586",
+      "title": "Emma Magnolia",
+      "thumb": "assets/thumb/video586.webp",
+      "views": "992.9K",
+      "duration": "38:01",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cTcvGHJBKXYlWFVqJzIqU1FRKDgqGVggJmhtDEtFOC0g",
+        "iv": "HYL586BGED67",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "53432",
+        "url": "https://baddiehub.com/emma-magnolia-15/",
+        "date": "2024-11-15T10:17:47+00:00"
+      }
+    },
+    {
+      "id": "video587",
+      "title": "Brandi Sheri",
+      "thumb": "assets/thumb/video587.webp",
+      "views": "671.5K",
+      "duration": "57:36",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fyU6GUJeK3YlLCcZKSA/UlFRKDgqbSpTKHp4DUtFOC0g",
+        "iv": "HYL587WUK7DC",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "53427",
+        "url": "https://baddiehub.com/brandi-sheri-8/",
+        "date": "2024-11-13T13:19:36+00:00"
+      }
+    },
     {
       "id": "video568",
       "title": "Mayhashira",
