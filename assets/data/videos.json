@@ -1,7 +1,187 @@
 {
   "version": "1.3",
-  "updated": "2026-11-13T10:02:57.363760+00:00",
+  "updated": "2026-11-13T17:39:31.610484+00:00",
   "videos": [
+    {
+      "id": "video827",
+      "title": "Bubble",
+      "thumb": "assets/thumb/video827.webp",
+      "views": "309.3K",
+      "duration": "20:17",
+      "video": {
+        "provider": "videy",
+        "encrypted": "eCklYDctBjchVVBNDnYlITJlNCclUltcKDgqYD8vNX1iDUFIOC0g",
+        "iv": "HYL827MRVKQN",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "44071",
+        "url": "https://baddiehub.com/bubble-2/",
+        "date": "2023-11-05T12:03:04+00:00"
+      }
+    },
+    {
+      "id": "video828",
+      "title": "Hayley & CJ Miles",
+      "thumb": "assets/thumb/video828.webp",
+      "views": "287.3K",
+      "duration": "27:45",
+      "video": {
+        "provider": "videy",
+        "encrypted": "BkghdzswIzoOHXVUS1kEdiU6LH0hIl5dW1woOCp7ITcgeBkCQUg4LSA=",
+        "iv": "HYL8286WCSOU",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "44068",
+        "url": "https://baddiehub.com/hayley-cj-miles/",
+        "date": "2023-11-05T12:02:17+00:00"
+      }
+    },
+    {
+      "id": "video829",
+      "title": "Sarah Arabic",
+      "thumb": "assets/thumb/video829.webp",
+      "views": "691.6K",
+      "duration": "01:29:14",
+      "video": {
+        "provider": "videy",
+        "encrypted": "BkghdwQ4MVIbJD1bU0oNdiU/IB0qMjxcW1woOCp+LVcraHsDQUg4LSA=",
+        "iv": "HYL829TGH3CP",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "44065",
+        "url": "https://baddiehub.com/sarah-arabic-4/",
+        "date": "2023-11-05T12:01:17+00:00"
+      }
+    },
+    {
+      "id": "video830",
+      "title": "Teresa",
+      "thumb": "assets/thumb/video830.webp",
+      "views": "887.7K",
+      "duration": "3:14",
+      "video": {
+        "provider": "videy",
+        "encrypted": "bTg9eRh9ZTBVQV0YdiU/NGAsIitVWlwoOCp+OSoteGwKQEg4LSA=",
+        "iv": "HYL830CWNNWP",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "44056",
+        "url": "https://baddiehub.com/teresa-13/",
+        "date": "2023-11-04T12:56:23+00:00"
+      }
+    },
+    {
+      "id": "video831",
+      "title": "Gem Jewels",
+      "thumb": "assets/thumb/video831.webp",
+      "views": "817.5K",
+      "duration": "30:30",
+      "video": {
+        "provider": "videy",
+        "encrypted": "bTg/eicxPCt6Xl0LdiU9N2EwPSpUWlwoOCp8OisxZ20LQEg4LSA=",
+        "iv": "HYL831BHROTR",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "44050",
+        "url": "https://baddiehub.com/gem-jewels-21/",
+        "date": "2023-11-04T12:53:53+00:00"
+      }
+    },
+    {
+      "id": "video832",
+      "title": "Sara Gold",
+      "thumb": "assets/thumb/video832.webp",
+      "views": "457.0K",
+      "duration": "3:48",
+      "video": {
+        "provider": "videy",
+        "encrypted": "bTgkeTAzM2NTQVkfdiUmNHshJ19XWlwoOCpnOTEgfRgIQEg4LSA=",
+        "iv": "HYL8327RCUWI",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "25413",
+        "url": "https://baddiehub.com/sara-gold-2/",
+        "date": "2023-11-04T12:52:47+00:00"
+      }
+    },
+    {
+      "id": "video833",
+      "title": "Layla",
+      "thumb": "assets/thumb/video833.webp",
+      "views": "382.3K",
+      "duration": "7:34",
+      "video": {
+        "provider": "videy",
+        "encrypted": "bTggeyECEVZfSlkAdiUiNm0qLF9WWlwoOCpjOycrdhgJQEg4LSA=",
+        "iv": "HYL8337YHCUM",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "44047",
+        "url": "https://baddiehub.com/layla-3/",
+        "date": "2023-11-04T12:52:41+00:00"
+      }
+    },
+    {
+      "id": "video834",
+      "title": "Thicky",
+      "thumb": "assets/thumb/video834.webp",
+      "views": "945.8K",
+      "duration": "3:58",
+      "video": {
+        "provider": "videy",
+        "encrypted": "BjNbbVpTVF0AdiUmUW1UNl1RWlwoOCpnXCdVbBoOQEg4LSA=",
+        "iv": "HYL8345C6C2I",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "24256",
+        "url": "https://baddiehub.com/eater/",
+        "date": "2023-11-04T12:52:17+00:00"
+      }
+    },
+    {
+      "id": "video835",
+      "title": "XW Karen",
+      "thumb": "assets/thumb/video835.webp",
+      "views": "455.1K",
+      "duration": "37:10",
+      "video": {
+        "provider": "videy",
+        "encrypted": "YCoheiNjZH0KdiU4N3QuISdQWlwoOCp5Oj4ve2APQEg4LSA=",
+        "iv": "HYL835OTLZTW",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "44044",
+        "url": "https://baddiehub.com/xw-karen-2/",
+        "date": "2023-11-04T12:51:23+00:00"
+      }
+    },
+    {
+      "id": "video836",
+      "title": "Montana",
+      "thumb": "assets/thumb/video836.webp",
+      "views": "483.7K",
+      "duration": "18:04",
+      "video": {
+        "provider": "videy",
+        "encrypted": "eCklGiIrDCpUQl1XAXYlWzlrIzFdU1pcKDgqGjQhImsaDEBIOC0g",
+        "iv": "HYL8365DAEZ4",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "44041",
+        "url": "https://baddiehub.com/montana-4/",
+        "date": "2023-11-04T12:50:15+00:00"
+      }
+    },
     {
       "id": "video817",
       "title": "Rebecca J",
