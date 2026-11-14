@@ -1,7 +1,187 @@
 {
   "version": "1.3",
-  "updated": "2026-11-13T22:55:29.108636+00:00",
+  "updated": "2026-11-14T02:51:06.817971+00:00",
   "videos": [
+    {
+      "id": "video847",
+      "title": "Nevvy",
+      "thumb": "assets/thumb/video847.webp",
+      "views": "498.9K",
+      "duration": "24:58",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fDs+GzhBHUFCXQJ2JSQwGzRBO1JdXCg4KmU9UTUbfA1HSDgtIA==",
+        "iv": "HYL847S4V5SK",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "43362",
+        "url": "https://baddiehub.com/nevvy-20/",
+        "date": "2023-10-16T12:01:22+00:00"
+      }
+    },
+    {
+      "id": "video848",
+      "title": "Dahi",
+      "thumb": "assets/thumb/video848.webp",
+      "views": "567.0K",
+      "duration": "20:31",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cjw9ZDUTUVxZCHYlKS9+KCQpXV1cKDgqaCI0KX5uAkdIOC0g",
+        "iv": "HYL848AQJPLF",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "43359",
+        "url": "https://baddiehub.com/dahi-2/",
+        "date": "2023-10-16T12:00:24+00:00"
+      }
+    },
+    {
+      "id": "video849",
+      "title": "Payton",
+      "thumb": "assets/thumb/video849.webp",
+      "views": "357.2K",
+      "duration": "23:01",
+      "video": {
+        "provider": "videy",
+        "encrypted": "DDw0ZioqBT1TCEpRShx2JSsgeCZHMFxdXCg4KmotMicddwNHSDgtIA==",
+        "iv": "HYL849X2DVCD",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "43356",
+        "url": "https://baddiehub.com/payton-13/",
+        "date": "2023-10-16T11:59:17+00:00"
+      }
+    },
+    {
+      "id": "video850",
+      "title": "Genesis",
+      "thumb": "assets/thumb/video850.webp",
+      "views": "905.2K",
+      "duration": "3:57",
+      "video": {
+        "provider": "videy",
+        "encrypted": "DDw0ZkQMBDsoNnxbXQt2JVs7eSMtMVVcXCg4Kho2MyJ3dgpGSDgtIA==",
+        "iv": "HYL850YXAWX4",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "43353",
+        "url": "https://baddiehub.com/genesis-8/",
+        "date": "2023-10-16T11:57:26+00:00"
+      }
+    },
+    {
+      "id": "video851",
+      "title": "Indian",
+      "thumb": "assets/thumb/video851.webp",
+      "views": "891.2K",
+      "duration": "9:11",
+      "video": {
+        "provider": "videy",
+        "encrypted": "eCklGAQKFiEvWFFWBXYlWTRmNjomVFxcKDgqGDksN2BhC0ZIOC0g",
+        "iv": "HYL851NOTHW6",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "43345",
+        "url": "https://baddiehub.com/indian/",
+        "date": "2023-10-16T11:56:32+00:00"
+      }
+    },
+    {
+      "id": "video852",
+      "title": "Hailey Rose",
+      "thumb": "assets/thumb/video852.webp",
+      "views": "660.8K",
+      "duration": "10:51",
+      "video": {
+        "provider": "videy",
+        "encrypted": "A0MmbREMXEBZAHYlWFBlITYsV1xcKDgqGV0vIGxrCEZIOC0g",
+        "iv": "HYL852DCCK37",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "43350",
+        "url": "https://baddiehub.com/hailey-rose-6/",
+        "date": "2023-10-16T11:56:04+00:00"
+      }
+    },
+    {
+      "id": "video853",
+      "title": "Benz",
+      "thumb": "assets/thumb/video853.webp",
+      "views": "238.0K",
+      "duration": "23:52",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fEMhbwMGOWVPVg52JVwvbyU8IVZcXCg4Kh0iJSRmZglGSDgtIA==",
+        "iv": "HYL853IIGAL3",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "43336",
+        "url": "https://baddiehub.com/benz-12/",
+        "date": "2023-10-15T12:17:34+00:00"
+      }
+    },
+    {
+      "id": "video854",
+      "title": "Haleigh Cox",
+      "thumb": "assets/thumb/video854.webp",
+      "views": "279.9K",
+      "duration": "9:42",
+      "video": {
+        "provider": "videy",
+        "encrypted": "eCklbUc+Gj4/d1lZBHYlLFdjNTM4UVxcKDgqbVopNGl/DkZIOC0g",
+        "iv": "HYL854PFWM4C",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "43324",
+        "url": "https://baddiehub.com/haleigh-cox-7/",
+        "date": "2023-10-15T12:15:58+00:00"
+      }
+    },
+    {
+      "id": "video855",
+      "title": "Kaden",
+      "thumb": "assets/thumb/video855.webp",
+      "views": "827.7K",
+      "duration": "23:11",
+      "video": {
+        "provider": "videy",
+        "encrypted": "bTgmeVdULH9/UVkHdiUkNBpVOFpQXFwoOCplOVBUYh0PRkg4LSA=",
+        "iv": "HYL8552M74WK",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "43318",
+        "url": "https://baddiehub.com/kaden-6/",
+        "date": "2023-10-15T12:14:55+00:00"
+      }
+    },
+    {
+      "id": "video856",
+      "title": "S2X",
+      "thumb": "assets/thumb/video856.webp",
+      "views": "869.9K",
+      "duration": "15:16",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cTo5GAF0B2AfdiU7JmQ2QyNTXFwoOCp6Ky43GWQMRkg4LSA=",
+        "iv": "HYL856K6TJET",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "43333",
+        "url": "https://baddiehub.com/s2x-2/",
+        "date": "2023-10-15T12:13:15+00:00"
+      }
+    },
     {
       "id": "video837",
       "title": "Dess & Jenna",
