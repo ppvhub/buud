@@ -1,7 +1,187 @@
 {
   "version": "1.3",
-  "updated": "2026-11-17T03:55:08.664301+00:00",
+  "updated": "2026-11-17T12:40:36.582988+00:00",
   "videos": [
+    {
+      "id": "video977",
+      "title": "Lexa",
+      "thumb": "assets/thumb/video977.webp",
+      "views": "834.3K",
+      "duration": "1:12",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZxgGZUtPe1YUdiUmMGYpPltSXl0oOCpnPSwoZBwNREk4LSA=",
+        "iv": "HYL9773KKHSI",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "38806",
+        "url": "https://baddiehub.com/lexa-4/",
+        "date": "2023-06-11T09:37:23+00:00"
+      }
+    },
+    {
+      "id": "video978",
+      "title": "Arabelle",
+      "thumb": "assets/thumb/video978.webp",
+      "views": "767.4K",
+      "duration": "12:57",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fCI4YlJZVFVLDXYlJzF7LkJdXV5dKDgqZjwxLxgaAkRJOC0g",
+        "iv": "HYL97857LURH",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "38803",
+        "url": "https://baddiehub.com/arabelle-5/",
+        "date": "2023-06-11T09:36:35+00:00"
+      }
+    },
+    {
+      "id": "video979",
+      "title": "Woe Senpai",
+      "thumb": "assets/thumb/video979.webp",
+      "views": "937.3K",
+      "duration": "4:54",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fAUJZ3IbcXJ2G3YlJzZqK0I8XF5dKDgqZjsgKhh7A0RJOC0g",
+        "iv": "HYL979T7IDUH",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "38785",
+        "url": "https://baddiehub.com/woe-senpai-9/",
+        "date": "2023-06-10T09:55:42+00:00"
+      }
+    },
+    {
+      "id": "video980",
+      "title": "SGF",
+      "thumb": "assets/thumb/video980.webp",
+      "views": "798.0K",
+      "duration": "5:49",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ciIuaHN+fh92JT4raDA2LlVRXSg4Kn8mIjFsaQpLSTgtIA==",
+        "iv": "HYL980FCRFHQ",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "38788",
+        "url": "https://baddiehub.com/sgf-19/",
+        "date": "2023-06-10T09:50:48+00:00"
+      }
+    },
+    {
+      "id": "video981",
+      "title": "Sazon",
+      "thumb": "assets/thumb/video981.webp",
+      "views": "805.2K",
+      "duration": "6:39",
+      "video": {
+        "provider": "videy",
+        "encrypted": "bT1ZHH4DQlgfdiUpOmNWRyVUUV0oOCpoNylXHWILS0k4LSA=",
+        "iv": "HYL981M24MYF",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "38779",
+        "url": "https://baddiehub.com/sazon-11/",
+        "date": "2023-06-10T09:47:19+00:00"
+      }
+    },
+    {
+      "id": "video982",
+      "title": "Keiyana",
+      "thumb": "assets/thumb/video982.webp",
+      "views": "511.1K",
+      "duration": "0:52",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fB17ZCBdVUtRXAd2JSJVZCNGXFdRXSg4KmNYLiIcGwhLSTgtIA==",
+        "iv": "HYL98243AJ6M",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "38776",
+        "url": "https://baddiehub.com/keiyana-2/",
+        "date": "2023-06-10T09:46:37+00:00"
+      }
+    },
+    {
+      "id": "video983",
+      "title": "Kyra",
+      "thumb": "assets/thumb/video983.webp",
+      "views": "274.9K",
+      "duration": "43:43",
+      "video": {
+        "provider": "videy",
+        "encrypted": "A0Iudz4iXFtqC3YlWFFtOz8/VlFdKDgqGVwnOmV4CUtJOC0g",
+        "iv": "HYL983WJYC27",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "38773",
+        "url": "https://baddiehub.com/kyra/",
+        "date": "2023-06-10T09:45:59+00:00"
+      }
+    },
+    {
+      "id": "video984",
+      "title": "Rich Des",
+      "thumb": "assets/thumb/video984.webp",
+      "views": "668.5K",
+      "duration": "36:27",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZDNZYUd8UR52JV01fiFBJ1FRXSg4Khw4NCAbYA5LSTgtIA==",
+        "iv": "HYL984O4CPV2",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "38770",
+        "url": "https://baddiehub.com/rich-des-5/",
+        "date": "2023-06-10T09:44:53+00:00"
+      }
+    },
+    {
+      "id": "video985",
+      "title": "Ny",
+      "thumb": "assets/thumb/video985.webp",
+      "views": "530.6K",
+      "duration": "4:32",
+      "video": {
+        "provider": "videy",
+        "encrypted": "eCklaXNlNC47W0tNBXYlKCF7LyIqUFFdKDgqaSwxLnhtD0tJOC0g",
+        "iv": "HYL985BWMUBG",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "38797",
+        "url": "https://baddiehub.com/ny-3/",
+        "date": "2023-06-10T09:43:35+00:00"
+      }
+    },
+    {
+      "id": "video986",
+      "title": "Wet Melons",
+      "thumb": "assets/thumb/video986.webp",
+      "views": "676.4K",
+      "duration": "9:26",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fjkvbwQ1WFRcAXYlJSpsIyYuU1FdKDgqZCcmInxpDEtJOC0g",
+        "iv": "HYL986FSABIJ",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "38764",
+        "url": "https://baddiehub.com/wet-melons-7/",
+        "date": "2023-06-10T09:43:00+00:00"
+      }
+    },
     {
       "id": "video967",
       "title": "Kazumi",
