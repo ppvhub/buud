@@ -1,7 +1,187 @@
 {
   "version": "1.3",
-  "updated": "2026-11-19T18:13:28.613665+00:00",
+  "updated": "2026-11-20T00:43:41.552925+00:00",
   "videos": [
+    {
+      "id": "video1057",
+      "title": "Britt",
+      "thumb": "assets/thumb/video1057.webp",
+      "views": "843.4K",
+      "duration": "7:00",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fSA1GUF2RSUrCmAmICp+OkJdVVgoPSktZSEtM3cYD0NBOC0g",
+        "iv": "HYL1057XPIOKO",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "35956",
+        "url": "https://baddiehub.com/britt-2/",
+        "date": "2023-04-05T10:03:01+00:00"
+      }
+    },
+    {
+      "id": "video1058",
+      "title": "M Giany & Irene",
+      "thumb": "assets/thumb/video1058.webp",
+      "views": "368.5K",
+      "duration": "9:38",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fjVbYCVZXHdfKSsBYScqVWApTV1VWCg9KSxkK1ItZBcPQ0E4LSA=",
+        "iv": "HYL1058KN6EJN",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "35951",
+        "url": "https://baddiehub.com/m-giany-irene/",
+        "date": "2023-04-04T11:13:47+00:00"
+      }
+    },
+    {
+      "id": "video1059",
+      "title": "Chyna",
+      "thumb": "assets/thumb/video1059.webp",
+      "views": "482.6K",
+      "duration": "8:43",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ATg4ZkpcfV81MQtnKVoreypMXVVYKD0pKmpbLDZnFg9DQTgtIA==",
+        "iv": "HYL1059HUH5DH",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "35813",
+        "url": "https://baddiehub.com/chyna-5/",
+        "date": "2023-04-04T11:08:05+00:00"
+      }
+    },
+    {
+      "id": "video1060",
+      "title": "Cinnamon",
+      "thumb": "assets/thumb/video1060.webp",
+      "views": "769.8K",
+      "duration": "39:10",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cjs1HltRXyIwC2Q5JyVlOkVeVVgoPSkpeiYiKHcfDENBOC0g",
+        "iv": "HYL1060XKFHTK",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "35935",
+        "url": "https://baddiehub.com/cinnamon/",
+        "date": "2023-04-04T11:05:49+00:00"
+      }
+    },
+    {
+      "id": "video1061",
+      "title": "Lethal",
+      "thumb": "assets/thumb/video1061.webp",
+      "views": "917.8K",
+      "duration": "7:25",
+      "video": {
+        "provider": "videy",
+        "encrypted": "dTMhZzUgRVpRWTg8JG4uIyppKkReVVgoPSkjbSItJGceDENBOC0g",
+        "iv": "HYL1061HGILCA",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "35938",
+        "url": "https://baddiehub.com/lethal-3/",
+        "date": "2023-04-04T11:05:47+00:00"
+      }
+    },
+    {
+      "id": "video1062",
+      "title": "Driply",
+      "thumb": "assets/thumb/video1062.webp",
+      "views": "689.2K",
+      "duration": "5:11",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZyA+aEFffUElKwwbNTwzfSRHXlVYKD0pVnY9NDBpHQxDQTgtIA==",
+        "iv": "HYL1062FSPSX4",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "35944",
+        "url": "https://baddiehub.com/driply-10/",
+        "date": "2023-04-04T11:05:02+00:00"
+      }
+    },
+    {
+      "id": "video1063",
+      "title": "Taliya",
+      "thumb": "assets/thumb/video1063.webp",
+      "views": "922.5K",
+      "duration": "8:32",
+      "video": {
+        "provider": "videy",
+        "encrypted": "Zic1HXFJWCA4HHc7PzF5OkZeVVgoPSk6eD42NHccDENBOC0g",
+        "iv": "HYL1063XWRPVX",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "35932",
+        "url": "https://baddiehub.com/taliya-2/",
+        "date": "2023-04-04T11:04:42+00:00"
+      }
+    },
+    {
+      "id": "video1064",
+      "title": "Lina",
+      "thumb": "assets/thumb/video1064.webp",
+      "views": "661.0K",
+      "duration": "6:04",
+      "video": {
+        "provider": "videy",
+        "encrypted": "YShaGlJ4UCIwBHY4NjZ2VUFeVVgoPSk7ezcxOxgbDENBOC0g",
+        "iv": "HYL10647XUYUY",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "35929",
+        "url": "https://baddiehub.com/lina-3/",
+        "date": "2023-04-04T11:03:28+00:00"
+      }
+    },
+    {
+      "id": "video1065",
+      "title": "Arii",
+      "thumb": "assets/thumb/video1065.webp",
+      "views": "833.9K",
+      "duration": "3:21",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fjkjHVlZY1glKwlpJyUqYFFAXlVYKD0pJGQkLS0cGgxDQTgtIA==",
+        "iv": "HYL10653NIJJF",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "35926",
+        "url": "https://baddiehub.com/arii/",
+        "date": "2023-04-04T11:01:43+00:00"
+      }
+    },
+    {
+      "id": "video1066",
+      "title": "Alexas & Angela",
+      "thumb": "assets/thumb/video1066.webp",
+      "views": "932.9K",
+      "duration": "18:57",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cCMnd05TXHArNwkdXiswZDtDXlVYKD0pUB0qNyl2GQxDQTgtIA==",
+        "iv": "HYL1066YJSD32",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "35920",
+        "url": "https://baddiehub.com/alexas-angela/",
+        "date": "2023-04-04T10:59:20+00:00"
+      }
+    },
     {
       "id": "video1047",
       "title": "Alicia",
