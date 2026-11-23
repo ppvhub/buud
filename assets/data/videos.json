@@ -1,7 +1,187 @@
 {
   "version": "1.3",
-  "updated": "2026-11-22T23:52:11.031241+00:00",
+  "updated": "2026-11-23T04:10:41.896300+00:00",
   "videos": [
+    {
+      "id": "video1177",
+      "title": "Emma Magnolia",
+      "thumb": "assets/thumb/video1177.webp",
+      "views": "713.7K",
+      "duration": "35:53",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ACM4YFtYX1YtFA15JVsweyxCX1RYKD0pNGZaNzZhGA1CQTgtIA==",
+        "iv": "HYL1177NUS4HV",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "30647",
+        "url": "https://baddiehub.com/emma-magnolia-2/",
+        "date": "2022-12-10T13:26:54+00:00"
+      }
+    },
+    {
+      "id": "video1178",
+      "title": "NG",
+      "thumb": "assets/thumb/video1178.webp",
+      "views": "918.7K",
+      "duration": "12:59",
+      "video": {
+        "provider": "videy",
+        "encrypted": "fkhaH1k4HgZ4OygteyhNX1RYKD0pNXgpKjZlFw1CQTgtIA==",
+        "iv": "HYL1178JUNGVW",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "30623",
+        "url": "https://baddiehub.com/ng/",
+        "date": "2022-12-09T13:55:11+00:00"
+      }
+    },
+    {
+      "id": "video1179",
+      "title": "Chanell H",
+      "thumb": "assets/thumb/video1179.webp",
+      "views": "562.6K",
+      "duration": "24:50",
+      "video": {
+        "provider": "videy",
+        "encrypted": "AyAjfVhSeV8tMQt+IFgzYDFMX1RYKD0pM2NZNC18Fg1CQTgtIA==",
+        "iv": "HYL1179SNP7MQ",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "30640",
+        "url": "https://baddiehub.com/chanell-h-2/",
+        "date": "2022-12-09T13:52:33+00:00"
+      }
+    },
+    {
+      "id": "video1180",
+      "title": "Foxy B",
+      "thumb": "assets/thumb/video1180.webp",
+      "views": "881.5K",
+      "duration": "57:03",
+      "video": {
+        "provider": "videy",
+        "encrypted": "eD4gHnRzSDQ2DmIgXS9gL0VQVFgoPSkvY1woLWIfAkJBOC0g",
+        "iv": "HYL1180MNL2MM",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "30631",
+        "url": "https://baddiehub.com/foxy-b-2/",
+        "date": "2022-12-09T13:48:03+00:00"
+      }
+    },
+    {
+      "id": "video1181",
+      "title": "B Naya",
+      "thumb": "assets/thumb/video1181.webp",
+      "views": "979.3K",
+      "duration": "8:50",
+      "video": {
+        "provider": "videy",
+        "encrypted": "eTFaH3ZQSC0XCmI8Ii5vVURQVFgoPSkvfyMpIhgeAkJBOC0g",
+        "iv": "HYL11817AMMQM",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "30637",
+        "url": "https://baddiehub.com/b-naya-2/",
+        "date": "2022-12-09T13:42:49+00:00"
+      }
+    },
+    {
+      "id": "video1182",
+      "title": "Natasha",
+      "thumb": "assets/thumb/video1182.webp",
+      "views": "683.9K",
+      "duration": "31:06",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ACQ9aVdbWH84OAZ6WVs3fiVHUFRYKD0pNxpaMDNoHQJCQTgtIA==",
+        "iv": "HYL1182GPT44U",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "30627",
+        "url": "https://baddiehub.com/natasha-2/",
+        "date": "2022-12-09T13:40:27+00:00"
+      }
+    },
+    {
+      "id": "video1183",
+      "title": "Lyric Sky",
+      "thumb": "assets/thumb/video1183.webp",
+      "views": "200.5K",
+      "duration": "27:39",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZEZeHUxUQzQ8G20iKDMYUUZQVFgoPSkgYSk0VRwcAkJBOC0g",
+        "iv": "HYL118336PGOB",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "30634",
+        "url": "https://baddiehub.com/lyric-sky/",
+        "date": "2022-12-09T13:39:42+00:00"
+      }
+    },
+    {
+      "id": "video1184",
+      "title": "Aoki",
+      "thumb": "assets/thumb/video1184.webp",
+      "views": "772.6K",
+      "duration": "17:26",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ezYqGm5+YSc2CR0nLSxoJUFQVFgoPSlQZCwrJWgbAkJBOC0g",
+        "iv": "HYL1184GFOBJ2",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "30613",
+        "url": "https://baddiehub.com/aoki-13/",
+        "date": "2022-12-08T13:59:22+00:00"
+      }
+    },
+    {
+      "id": "video1185",
+      "title": "Perfect P",
+      "thumb": "assets/thumb/video1185.webp",
+      "views": "203.3K",
+      "duration": "12:26",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cioqZydQXEphVz48GGk3KCpsUUBQVFgoPSkkdCktIRwaAkJBOC0g",
+        "iv": "HYL11853BIGZF",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "30598",
+        "url": "https://baddiehub.com/perfect-p-2/",
+        "date": "2022-12-08T13:58:41+00:00"
+      }
+    },
+    {
+      "id": "video1186",
+      "title": "Minx",
+      "thumb": "assets/thumb/video1186.webp",
+      "views": "592.8K",
+      "duration": "5:10",
+      "video": {
+        "provider": "videy",
+        "encrypted": "ZTg+GH9lSSIwBRwmOjJmMUNQVFgoPSlRZTs1K3wZAkJBOC0g",
+        "iv": "HYL1186SHQUK3",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "30610",
+        "url": "https://baddiehub.com/minx-11/",
+        "date": "2022-12-08T13:53:19+00:00"
+      }
+    },
     {
       "id": "video1167",
       "title": "TU Holly",
