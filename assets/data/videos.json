@@ -1,7 +1,187 @@
 {
   "version": "1.3",
-  "updated": "2026-11-25T14:59:46.162538+00:00",
+  "updated": "2026-11-25T23:34:39.783893+00:00",
   "videos": [
+    {
+      "id": "video1247",
+      "title": "Shortcakez",
+      "thumb": "assets/thumb/video1247.webp",
+      "views": "818.0K",
+      "duration": "9:47",
+      "video": {
+        "provider": "videy",
+        "encrypted": "Az47GUBIVCc4C2w3PFRgNEJcV1goPSkhdD1TLXkYDkFBOC0g",
+        "iv": "HYL1247VN7SZC",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "27911",
+        "url": "https://baddiehub.com/shortcakez-2/",
+        "date": "2022-08-31T10:53:55+00:00"
+      }
+    },
+    {
+      "id": "video1248",
+      "title": "Tay & Nia",
+      "thumb": "assets/thumb/video1248.webp",
+      "views": "294.6K",
+      "duration": "11:48",
+      "video": {
+        "provider": "videy",
+        "encrypted": "eD8/Z3BVW381OBxpOSMsfCtNXFdYKD0pJHoiKzFmFw5BQTgtIA==",
+        "iv": "HYL1248IROLTF",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "27905",
+        "url": "https://baddiehub.com/tay-nia/",
+        "date": "2022-08-31T10:50:43+00:00"
+      }
+    },
+    {
+      "id": "video1249",
+      "title": "Issa Bhaddie",
+      "thumb": "assets/thumb/video1249.webp",
+      "views": "844.2K",
+      "duration": "3:23",
+      "video": {
+        "provider": "videy",
+        "encrypted": "AklZHFAkGwEbKCckbFRMXFdYKD0pVmsmIyEZFg5BQTgtIA==",
+        "iv": "HYL12496BGHE4",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "27902",
+        "url": "https://baddiehub.com/issa-bhaddie-4/",
+        "date": "2022-08-31T10:49:42+00:00"
+      }
+    },
+    {
+      "id": "video1250",
+      "title": "SummerNT",
+      "thumb": "assets/thumb/video1250.webp",
+      "views": "108.9K",
+      "duration": "11:57",
+      "video": {
+        "provider": "videy",
+        "encrypted": "cjg8HkJXfyEsG2FePCVmM0VdV1goPSksHT0iK34fD0FBOC0g",
+        "iv": "HYL1250QHFS3N",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "27898",
+        "url": "https://baddiehub.com/summernt-2/",
+        "date": "2022-08-30T11:00:10+00:00"
+      }
+    },
+    {
+      "id": "video1251",
+      "title": "Strokes",
+      "thumb": "assets/thumb/video1251.webp",
+      "views": "281.4K",
+      "duration": "10:36",
+      "video": {
+        "provider": "videy",
+        "encrypted": "e0JcG0taPi0bGy4kNWFQRF1XWCg9KVZtJTIsHR4PQUE4LSA=",
+        "iv": "HYL12512OVKC4",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "27895",
+        "url": "https://baddiehub.com/strokes-18/",
+        "date": "2022-08-30T10:59:00+00:00"
+      }
+    },
+    {
+      "id": "video1252",
+      "title": "Julerri",
+      "thumb": "assets/thumb/video1252.webp",
+      "views": "341.6K",
+      "duration": "9:23",
+      "video": {
+        "provider": "videy",
+        "encrypted": "YCEsdxpbR0BUICwCHDk+IncoR11XWCg9KVF6PyU6ZR0PQUE4LSA=",
+        "iv": "HYL1252JYAQT3",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "27892",
+        "url": "https://baddiehub.com/julerri-10/",
+        "date": "2022-08-30T10:58:02+00:00"
+      }
+    },
+    {
+      "id": "video1253",
+      "title": "Keya",
+      "thumb": "assets/thumb/video1253.webp",
+      "views": "217.3K",
+      "duration": "16:58",
+      "video": {
+        "provider": "videy",
+        "encrypted": "YSY1HXtTSCkSCWFfWjZ4OkZdV1goPSksHFsxNXccD0FBOC0g",
+        "iv": "HYL1253XVU52N",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "27889",
+        "url": "https://baddiehub.com/keya-5/",
+        "date": "2022-08-30T10:56:54+00:00"
+      }
+    },
+    {
+      "id": "video1254",
+      "title": "Aura",
+      "thumb": "assets/thumb/video1254.webp",
+      "views": "730.5K",
+      "duration": "10:50",
+      "video": {
+        "provider": "videy",
+        "encrypted": "AEVfHz4sCWc+ISh7JkFdV1goPSkqfSAvNmsbD0FBOC0g",
+        "iv": "HYL1254DUKNSH",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "27886",
+        "url": "https://baddiehub.com/aura-5/",
+        "date": "2022-08-30T10:55:27+00:00"
+      }
+    },
+    {
+      "id": "video1255",
+      "title": "Raquel Q",
+      "thumb": "assets/thumb/video1255.webp",
+      "views": "431.2K",
+      "duration": "6:42",
+      "video": {
+        "provider": "videy",
+        "encrypted": "Az48ZmRZV0Q9OBpiWFgtfypAXVdYKD0pLxtZKjJnGg9BQTgtIA==",
+        "iv": "HYL1255HQN75M",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "27882",
+        "url": "https://baddiehub.com/raquel-q/",
+        "date": "2022-08-30T10:53:49+00:00"
+      }
+    },
+    {
+      "id": "video1256",
+      "title": "Lissa",
+      "thumb": "assets/thumb/video1256.webp",
+      "views": "456.9K",
+      "duration": "11:42",
+      "video": {
+        "provider": "videy",
+        "encrypted": "YikjflBXdlNCPzAEeTs2LX5VQ11XWCg9KTR4NyozGBkPQUE4LSA=",
+        "iv": "HYL12567PNYVV",
+        "ver": 1
+      },
+      "source": {
+        "site_id": "27879",
+        "url": "https://baddiehub.com/lissa-2/",
+        "date": "2022-08-30T10:49:10+00:00"
+      }
+    },
     {
       "id": "video1237",
       "title": "Savannah & Kazumi",
